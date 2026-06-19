@@ -1,0 +1,30 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="MIT"
+
+[[mods]]
+modId="campuslife"
+version="1.0.0"
+displayName="Campus Life \u6821\u56ed\u751f\u6d3b"
+credits="Inspired by Minecraft Forge MDK and education mods"
+authors="Campus Life Team"
+description='''
+Campus Life Mod - Bring the school experience to Minecraft!
+Features: Textbooks, Desks, Blackboards, Lockers, Cafeteria Food and more.
+\u6821\u56ed\u751f\u6d3b\u6a21\u7ec4 - \u5728Minecraft\u4e2d\u4f53\u9a8c\u6821\u56ed\u751f\u6d3b\uff01
+\u5305\u542b\uff1a\u8bfe\u672c\u3001\u8bfe\u684c\u3001\u9ed1\u677f\u3001\u50a8\u7269\u67dc\u3001\u98df\u5802\u7f8e\u98df\u7b49\u3002
+'''
+
+[[dependencies.campuslife]]
+    modId="forge"
+    mandatory=true
+    versionRange="[36,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.campuslife]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5,1.17)"
+    ordering="NONE"
+    side="BOTH"
