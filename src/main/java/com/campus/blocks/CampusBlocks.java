@@ -76,6 +76,27 @@ public class CampusBlocks {
             registerBlock("crypto_miner", () -> new CryptoMinerBlock(Block.Properties.of(Material.METAL)
                     .strength(2.5f, 6.0f).sound(SoundType.METAL).lightLevel(s -> 6)));
 
+    // === v16: 5 个商业系统 GUI 方块 ===
+    public static final RegistryObject<Block> CONTRACT_DESK =
+            registerBlock("contract_desk", () -> new ContractDeskBlock(Block.Properties.of(Material.WOOD)
+                    .strength(2.5f, 4.0f).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> ESG_DISPLAY =
+            registerBlock("esg_display", () -> new ESGDisplayBlock(Block.Properties.of(Material.METAL)
+                    .strength(2.0f, 5.0f).sound(SoundType.METAL).lightLevel(s -> 7)));
+
+    public static final RegistryObject<Block> IPO_BELL =
+            registerBlock("ipo_bell", () -> new IPOBellBlock(Block.Properties.of(Material.METAL)
+                    .strength(3.0f, 8.0f).sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> VC_TABLE =
+            registerBlock("vc_table", () -> new VCTableBlock(Block.Properties.of(Material.METAL)
+                    .strength(3.0f, 6.0f).sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> STOCK_TICKER =
+            registerBlock("stock_ticker", () -> new StockTickerBlock(Block.Properties.of(Material.METAL)
+                    .strength(2.0f, 5.0f).sound(SoundType.METAL).lightLevel(s -> 9)));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         ITEMS.register(name, () -> new BlockItem(toReturn.get(),

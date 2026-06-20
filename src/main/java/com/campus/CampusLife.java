@@ -7,6 +7,11 @@ import com.campus.gui.CampusContainers;
 import com.campus.gui.IncubatorScreen;
 import com.campus.gui.AuctionScreen;
 import com.campus.gui.CryptoScreen;
+import com.campus.gui.ContractScreen;
+import com.campus.gui.ESGScreen;
+import com.campus.gui.IPOScreen;
+import com.campus.gui.VCScreen;
+import com.campus.gui.StockScreen;
 import com.campus.items.CampusItems;
 import com.campus.network.NetworkHandler;
 import net.minecraft.client.gui.ScreenManager;
@@ -48,5 +53,10 @@ public class CampusLife {
         ScreenManager.register(CampusContainers.INCUBATOR_CONTAINER.get(), IncubatorScreen::new);
         ScreenManager.register(CampusContainers.AUCTION_CONTAINER.get(), AuctionScreen::new);
         ScreenManager.register(CampusContainers.CRYPTO_CONTAINER.get(), CryptoScreen::new);
+        ScreenManager.register(CampusContainers.CONTRACT_CONTAINER.get(), ContractScreen::new);
+        ScreenManager.register(CampusContainers.ESG_CONTAINER.get(), ESGScreen::new);
+        ScreenManager.register(CampusContainers.IPO_CONTAINER.get(), IPOScreen::new);
+        ScreenManager.register(CampusContainers.VC_CONTAINER.get(), VCScreen::new);
+        ScreenManager.register(CampusContainers.STOCK_CONTAINER.get(), StockScreen::new);
     }
 }

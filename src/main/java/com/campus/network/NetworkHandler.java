@@ -39,6 +39,8 @@ public class NetworkHandler {
             CryptoBuyPacket::encode, CryptoBuyPacket::decode, CryptoBuyPacket::handle);
         CHANNEL.registerMessage(idx++, CryptoSellPacket.class,
             CryptoSellPacket::encode, CryptoSellPacket::decode, CryptoSellPacket::handle);
+        CHANNEL.registerMessage(idx++, GenericActionPacket.class,
+            GenericActionPacket::encode, GenericActionPacket::decode, GenericActionPacket::handle);
     }
 
     /** 孵化器入驻包 */
@@ -140,6 +142,50 @@ public class NetworkHandler {
                 ServerPlayerEntity player = ctx.get().getSender();
                 if (player != null) {
                     com.campus.systems.CryptoSystem.sell(player, pkt.coin, pkt.amount);
+                }
+            });
+            ctx.get().setPacketHandled(true);
+        }
+    }
+
+    /** 通用动作包 - 用于 contract/esg/ipo/vc/stock 等 */
+    public static class GenericActionPacket {
+        private String action;
+        private int param;
+        public GenericActionPacket() {}
+        public GenericActionPacket(String action, int param) { this.action = action; this.param = param; }
+        public static void encode(GenericActionPacket pkt, PacketBuffer buf) {
+            buf.writeUtf(pkt.action, 32); buf.writeInt(pkt.param);
+        }
+        public static GenericActionPacket decode(PacketBuffer buf) {
+            return new GenericActionPacket(buf.readUtf(32), buf.readInt());
+        }
+        public static void handle(GenericActionPacket pkt, Supplier<NetworkEvent.Context> ctx) {
+            ctx.get().enqueueWork(() -> {
+                ServerPlayerEntity player = ctx.get().getSender();
+                if (player == null) return;
+                switch (pkt.action) {
+                    case "contract":
+                        com.campus.systems.ContractSystem.sign(player, pkt.param + 1);
+                        break;
+                    case "esg":
+                        // param = dim*1000 + amount
+                        int dim = pkt.param / 1000;
+                        int amount = pkt.param % 1000;
+                        com.campus.systems.ESGSystem.invest(player, dim + 1, amount);
+                        break;
+                    case "ipo":
+                        com.campus.systems.IPOSystem.goIPO(player);
+                        break;
+                    case "vc":
+                        com.campus.systems.VCSystem.raiseRound(player, pkt.param + 1);
+                        break;
+                    case "stock_buy":
+                        com.campus.systems.StockMarketSystem.buy(player, pkt.param + 1, 1);
+                        break;
+                    case "stock_sell":
+                        com.campus.systems.StockMarketSystem.sell(player, pkt.param + 1, 1);
+                        break;
                 }
             });
             ctx.get().setPacketHandled(true);

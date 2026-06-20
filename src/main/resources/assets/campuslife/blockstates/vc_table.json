@@ -1,0 +1,1 @@
+{"variants":{"facing=north":{"model":"campuslife:block/vc_table"},"facing=east":{"model":"campuslife:block/vc_table","y":90},"facing=south":{"model":"campuslife:block/vc_table","y":180},"facing=west":{"model":"campuslife:block/vc_table","y":270}}}

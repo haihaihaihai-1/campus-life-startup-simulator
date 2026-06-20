@@ -33,5 +33,15 @@
   "container.campuslife.incubator": "\u5b75\u5316\u5668",
   "container.campuslife.auction": "\u62cd\u5356\u884c",
   "container.campuslife.crypto": "\u52a0\u5bc6\u8d27\u5e01\u4ea4\u6613",
+  "block.campuslife.contract_desk": "\u4f9b\u5e94\u5408\u540c\u684c",
+  "block.campuslife.esg_display": "ESG \u8bc4\u7ea7\u5c4f",
+  "block.campuslife.ipo_bell": "\u4e0a\u5e02\u9707\u94c3",
+  "block.campuslife.vc_table": "\u98ce\u9669\u6295\u8d44\u6863",
+  "block.campuslife.stock_ticker": "\u80a1\u5e02\u62a5\u4ef7\u7eb8",
+  "container.campuslife.contract": "\u5408\u540c\u4e2d\u5fc3",
+  "container.campuslife.esg": "ESG \u8bc4\u7ea7",
+  "container.campuslife.ipo": "IPO \u4e2d\u5fc3",
+  "container.campuslife.vc": "\u98ce\u9669\u6295\u8d44",
+  "container.campuslife.stock": "\u80a1\u5e02\u4ea4\u6613",
   "itemGroup.campuslife": "\u6821\u56ed\u751f\u6d3b"
 }

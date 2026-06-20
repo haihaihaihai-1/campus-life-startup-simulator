@@ -1,7 +1,6 @@
 package com.campus.gui;
 
 import com.campus.CampusLife;
-import com.campus.blocks.CampusBlocks;
 import net.minecraft.inventory.container.ContainerType;
 import net.minecraftforge.common.extensions.IForgeContainerType;
 import net.minecraftforge.fml.RegistryObject;
@@ -29,4 +28,29 @@ public class CampusContainers {
         CONTAINERS.register("crypto",
             () -> IForgeContainerType.create((windowId, inv, buf) ->
                 new CryptoContainer(windowId, inv, buf.readBlockPos())));
+
+    public static final RegistryObject<ContainerType<ContractContainer>> CONTRACT_CONTAINER =
+        CONTAINERS.register("contract",
+            () -> IForgeContainerType.create((windowId, inv, buf) ->
+                new ContractContainer(windowId, inv, buf.readBlockPos())));
+
+    public static final RegistryObject<ContainerType<ESGContainer>> ESG_CONTAINER =
+        CONTAINERS.register("esg",
+            () -> IForgeContainerType.create((windowId, inv, buf) ->
+                new ESGContainer(windowId, inv, buf.readBlockPos())));
+
+    public static final RegistryObject<ContainerType<IPOContainer>> IPO_CONTAINER =
+        CONTAINERS.register("ipo",
+            () -> IForgeContainerType.create((windowId, inv, buf) ->
+                new IPOContainer(windowId, inv, buf.readBlockPos())));
+
+    public static final RegistryObject<ContainerType<VCContainer>> VC_CONTAINER =
+        CONTAINERS.register("vc",
+            () -> IForgeContainerType.create((windowId, inv, buf) ->
+                new VCContainer(windowId, inv, buf.readBlockPos())));
+
+    public static final RegistryObject<ContainerType<StockContainer>> STOCK_CONTAINER =
+        CONTAINERS.register("stock",
+            () -> IForgeContainerType.create((windowId, inv, buf) ->
+                new StockContainer(windowId, inv, buf.readBlockPos())));
 }

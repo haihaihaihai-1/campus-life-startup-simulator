@@ -1,0 +1,1 @@
+{"variants":{"facing=north":{"model":"campuslife:block/ipo_bell"},"facing=east":{"model":"campuslife:block/ipo_bell","y":90},"facing=south":{"model":"campuslife:block/ipo_bell","y":180},"facing=west":{"model":"campuslife:block/ipo_bell","y":270}}}

@@ -1,0 +1,79 @@
+{
+  "credit": "Campus Life - IPO Bell",
+  "parent": "block/block",
+  "textures": {
+    "particle": "campuslife:block/ipo_base",
+    "base": "campuslife:block/ipo_base",
+    "bell": "campuslife:block/ipo_bell",
+    "wood": "campuslife:block/ipo_wood",
+    "screen": "campuslife:block/ipo_screen"
+  },
+  "elements": [
+    {
+      "name": "base",
+      "from": [1, 0, 1],
+      "to": [15, 3, 15],
+      "faces": {
+        "north": {"uv": [0, 0, 14, 3], "texture": "#base"},
+        "east": {"uv": [0, 0, 14, 3], "texture": "#base"},
+        "south": {"uv": [0, 0, 14, 3], "texture": "#base"},
+        "west": {"uv": [0, 0, 14, 3], "texture": "#base"},
+        "up": {"uv": [0, 0, 14, 14], "texture": "#wood"},
+        "down": {"uv": [0, 0, 14, 14], "texture": "#base"}
+      }
+    },
+    {
+      "name": "left_pillar",
+      "from": [3, 3, 6],
+      "to": [4, 13, 7],
+      "faces": {
+        "north": {"uv": [0, 0, 1, 10], "texture": "#wood"},
+        "east": {"uv": [0, 0, 1, 10], "texture": "#wood"},
+        "south": {"uv": [0, 0, 1, 10], "texture": "#wood"},
+        "west": {"uv": [0, 0, 1, 10], "texture": "#wood"}
+      }
+    },
+    {
+      "name": "right_pillar",
+      "from": [12, 3, 6],
+      "to": [13, 13, 7],
+      "faces": {
+        "north": {"uv": [0, 0, 1, 10], "texture": "#wood"},
+        "east": {"uv": [0, 0, 1, 10], "texture": "#wood"},
+        "south": {"uv": [0, 0, 1, 10], "texture": "#wood"},
+        "west": {"uv": [0, 0, 1, 10], "texture": "#wood"}
+      }
+    },
+    {
+      "name": "top_bar",
+      "from": [3, 13, 6],
+      "to": [13, 14, 7],
+      "faces": {
+        "north": {"uv": [0, 0, 10, 1], "texture": "#wood"},
+        "south": {"uv": [0, 0, 10, 1], "texture": "#wood"},
+        "up": {"uv": [0, 0, 10, 1], "texture": "#wood"}
+      }
+    },
+    {
+      "name": "bell",
+      "from": [6, 8, 5],
+      "to": [10, 12, 9],
+      "faces": {
+        "north": {"uv": [0, 0, 4, 4], "texture": "#bell"},
+        "east": {"uv": [0, 0, 4, 4], "texture": "#bell"},
+        "south": {"uv": [0, 0, 4, 4], "texture": "#bell"},
+        "west": {"uv": [0, 0, 4, 4], "texture": "#bell"},
+        "up": {"uv": [0, 0, 4, 4], "texture": "#bell"},
+        "down": {"uv": [0, 0, 4, 4], "texture": "#bell"}
+      }
+    },
+    {
+      "name": "screen_back",
+      "from": [3, 4, 9],
+      "to": [13, 12, 10],
+      "faces": {
+        "south": {"uv": [0, 0, 10, 8], "texture": "#screen"}
+      }
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "credit": "Campus Life - Contract Desk",
+  "parent": "block/block",
+  "textures": {
+    "particle": "campuslife:block/contract_desk_top",
+    "top": "campuslife:block/contract_desk_top",
+    "side": "campuslife:block/contract_desk_side",
+    "bottom": "campuslife:block/contract_desk_bottom",
+    "paper": "campuslife:block/contract_desk_paper",
+    "stamp": "campuslife:block/contract_desk_stamp"
+  },
+  "elements": [
+    {
+      "name": "table_legs_fl",
+      "from": [1, 0, 1],
+      "to": [3, 12, 3],
+      "faces": {
+        "north": {"uv": [0, 0, 2, 12], "texture": "#side"},
+        "east": {"uv": [0, 0, 2, 12], "texture": "#side"},
+        "south": {"uv": [0, 0, 2, 12], "texture": "#side"},
+        "west": {"uv": [0, 0, 2, 12], "texture": "#side"}
+      }
+    },
+    {
+      "name": "table_legs_fr",
+      "from": [13, 0, 1],
+      "to": [15, 12, 3],
+      "faces": {
+        "north": {"uv": [0, 0, 2, 12], "texture": "#side"},
+        "east": {"uv": [0, 0, 2, 12], "texture": "#side"},
+        "south": {"uv": [0, 0, 2, 12], "texture": "#side"},
+        "west": {"uv": [0, 0, 2, 12], "texture": "#side"}
+      }
+    },
+    {
+      "name": "table_legs_bl",
+      "from": [1, 0, 13],
+      "to": [3, 12, 15],
+      "faces": {
+        "north": {"uv": [0, 0, 2, 12], "texture": "#side"},
+        "east": {"uv": [0, 0, 2, 12], "texture": "#side"},
+        "south": {"uv": [0, 0, 2, 12], "texture": "#side"},
+        "west": {"uv": [0, 0, 2, 12], "texture": "#side"}
+      }
+    },
+    {
+      "name": "table_legs_br",
+      "from": [13, 0, 13],
+      "to": [15, 12, 15],
+      "faces": {
+        "north": {"uv": [0, 0, 2, 12], "texture": "#side"},
+        "east": {"uv": [0, 0, 2, 12], "texture": "#side"},
+        "south": {"uv": [0, 0, 2, 12], "texture": "#side"},
+        "west": {"uv": [0, 0, 2, 12], "texture": "#side"}
+      }
+    },
+    {
+      "name": "table_top",
+      "from": [0, 12, 0],
+      "to": [16, 14, 16],
+      "faces": {
+        "north": {"uv": [0, 0, 16, 2], "texture": "#side"},
+        "east": {"uv": [0, 0, 16, 2], "texture": "#side"},
+        "south": {"uv": [0, 0, 16, 2], "texture": "#side"},
+        "west": {"uv": [0, 0, 16, 2], "texture": "#side"},
+        "up": {"uv": [0, 0, 16, 16], "texture": "#top"},
+        "down": {"uv": [0, 0, 16, 16], "texture": "#bottom"}
+      }
+    },
+    {
+      "name": "contract_paper",
+      "from": [4, 14, 4],
+      "to": [12, 14.1, 12],
+      "faces": {
+        "up": {"uv": [0, 0, 16, 16], "texture": "#paper"},
+        "down": {"uv": [0, 0, 16, 16], "texture": "#paper"}
+      }
+    },
+    {
+      "name": "stamp",
+      "from": [11, 14, 11],
+      "to": [14, 16, 14],
+      "faces": {
+        "north": {"uv": [0, 0, 6, 4], "texture": "#stamp"},
+        "east": {"uv": [0, 0, 6, 4], "texture": "#stamp"},
+        "south": {"uv": [0, 0, 6, 4], "texture": "#stamp"},
+        "west": {"uv": [0, 0, 6, 4], "texture": "#stamp"},
+        "up": {"uv": [0, 0, 6, 6], "texture": "#stamp"}
+      }
+    }
+  ]
+}
