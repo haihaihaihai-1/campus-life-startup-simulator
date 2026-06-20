@@ -80,4 +80,19 @@ public class AuctionSystem {
             return false;
         }).orElse(false);
     }
+
+    /** 显示拍卖列表 - 兼容老 V6Commands */
+    public static void show(ServerPlayerEntity player) {
+        UUID uuid = player.getUUID();
+        if (ACTIVE.isEmpty()) {
+            player.sendMessage(new StringTextComponent("\u00a77\u5f53\u524d\u65e0\u62cd\u54c1"), uuid);
+            return;
+        }
+        player.sendMessage(new StringTextComponent("\u00a76=== \u62cd\u5356\u5217\u8868 ==="), uuid);
+        for (int i = 0; i < ACTIVE.size(); i++) {
+            AuctionItem it = ACTIVE.get(i);
+            player.sendMessage(new StringTextComponent("\u00a7e[" + i + "] " + it.itemName +
+                " | \u5f53\u524d: " + it.currentBid + " | \u4e00\u53e3\u4ef7: " + it.buyoutPrice), uuid);
+        }
+    }
 }

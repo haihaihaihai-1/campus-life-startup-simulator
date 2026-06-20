@@ -89,6 +89,22 @@ public class IncubatorSystem {
         return s != null ? INCUBATORS[s.incubatorIdx].bonusPercent : 0;
     }
 
+    /** 收入加成 - 兼容老 API */
+    public static int getIncomeBonus(UUID uuid) { return getBonus(uuid); }
+
+    /** 显示状态 - 兼容老 V5Commands */
+    public static void show(ServerPlayerEntity player) {
+        UUID uuid = player.getUUID();
+        IncubatorSession s = sessions.get(uuid);
+        if (s == null) {
+            player.sendMessage(new StringTextComponent("\u00a77\u672a\u5165\u9a7b\u4efb\u4f55\u5b75\u5316\u5668"), uuid);
+        } else {
+            Incubator inc = INCUBATORS[s.incubatorIdx];
+            player.sendMessage(new StringTextComponent("\u00a7a\u5f53\u524d: " + inc.name +
+                " | \u52a0\u6210: +" + inc.bonusPercent + "% | \u5269\u4f59: " + (s.remainingTicks/1200) + "\u5206\u949f"), uuid);
+        }
+    }
+
     public static void tick() {
         sessions.entrySet().removeIf(e -> {
             e.getValue().remainingTicks--;
