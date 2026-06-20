@@ -3,6 +3,7 @@ name: Build CampusLife Mod
 on:
   push:
     branches: [ main ]
+    tags: [ 'v*' ]
   workflow_dispatch:
 
 permissions:
