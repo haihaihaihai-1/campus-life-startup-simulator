@@ -1,6 +1,84 @@
 {
-  "parent": "block/cube_all",
+  "parent": "block/block",
   "textures": {
-    "all": "campuslife:block/blackboard"
-  }
+    "frame": "campuslife:block/blackboard_frame",
+    "board": "campuslife:block/blackboard_board",
+    "chalk": "campuslife:block/blackboard_chalk"
+  },
+  "elements": [
+    {
+      "name": "frame_top",
+      "from": [0, 14, 0],
+      "to": [16, 16, 2],
+      "faces": {
+        "down":  { "texture": "#frame", "uv": [0,0,16,2] },
+        "up":    { "texture": "#frame", "uv": [0,0,16,2] },
+        "north": { "texture": "#frame", "uv": [0,0,16,2] },
+        "south": { "texture": "#frame", "uv": [0,0,16,2] },
+        "west":  { "texture": "#frame", "uv": [0,0,2,2] },
+        "east":  { "texture": "#frame", "uv": [0,0,2,2] }
+      }
+    },
+    {
+      "name": "frame_bottom",
+      "from": [0, 0, 0],
+      "to": [16, 2, 2],
+      "faces": {
+        "down":  { "texture": "#frame", "uv": [0,0,16,2] },
+        "up":    { "texture": "#frame", "uv": [0,0,16,2] },
+        "north": { "texture": "#frame", "uv": [0,0,16,2] },
+        "south": { "texture": "#frame", "uv": [0,0,16,2] },
+        "west":  { "texture": "#frame", "uv": [0,0,2,2] },
+        "east":  { "texture": "#frame", "uv": [0,0,2,2] }
+      }
+    },
+    {
+      "name": "frame_left",
+      "from": [0, 2, 0],
+      "to": [2, 14, 2],
+      "faces": {
+        "north": { "texture": "#frame", "uv": [0,0,2,12] },
+        "south": { "texture": "#frame", "uv": [0,0,2,12] },
+        "west":  { "texture": "#frame", "uv": [0,0,2,12] },
+        "east":  { "texture": "#frame", "uv": [0,0,2,12] }
+      }
+    },
+    {
+      "name": "frame_right",
+      "from": [14, 2, 0],
+      "to": [16, 14, 2],
+      "faces": {
+        "north": { "texture": "#frame", "uv": [0,0,2,12] },
+        "south": { "texture": "#frame", "uv": [0,0,2,12] },
+        "west":  { "texture": "#frame", "uv": [0,0,2,12] },
+        "east":  { "texture": "#frame", "uv": [0,0,2,12] }
+      }
+    },
+    {
+      "name": "board_surface",
+      "from": [2, 2, 0],
+      "to": [14, 14, 1],
+      "faces": {
+        "north": { "texture": "#board", "uv": [0,0,12,12] },
+        "south": { "texture": "#board", "uv": [0,0,12,12] }
+      }
+    },
+    {
+      "name": "chalk_tray",
+      "from": [3, 1, 1],
+      "to": [13, 2, 2],
+      "faces": {
+        "up":    { "texture": "#frame", "uv": [0,0,10,1] },
+        "north": { "texture": "#frame", "uv": [0,0,10,1] }
+      }
+    },
+    {
+      "name": "chalk_piece",
+      "from": [7, 2, 1],
+      "to": [8, 3, 2],
+      "faces": {
+        "north": { "texture": "#chalk", "uv": [0,0,1,1] }
+      }
+    }
+  ]
 }

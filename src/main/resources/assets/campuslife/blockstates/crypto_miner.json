@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "campuslife:block/crypto_miner" }
+  }
+}

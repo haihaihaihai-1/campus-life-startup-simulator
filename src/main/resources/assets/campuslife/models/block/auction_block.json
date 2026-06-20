@@ -1,0 +1,68 @@
+{
+  "parent": "block/block",
+  "textures": {
+    "wood":  "campuslife:block/auction_wood",
+    "gold":  "campuslife:block/auction_gold",
+    "cloth": "campuslife:block/auction_cloth"
+  },
+  "elements": [
+    {
+      "name": "base",
+      "from": [0, 0, 0],
+      "to": [16, 8, 16],
+      "faces": {
+        "down":  { "texture": "#wood", "uv": [0,0,16,16] },
+        "up":    { "texture": "#wood", "uv": [0,0,16,16] },
+        "north": { "texture": "#wood", "uv": [0,0,16,8] },
+        "south": { "texture": "#wood", "uv": [0,0,16,8] },
+        "west":  { "texture": "#wood", "uv": [0,0,16,8] },
+        "east":  { "texture": "#wood", "uv": [0,0,16,8] }
+      }
+    },
+    {
+      "name": "podium_top",
+      "from": [2, 8, 2],
+      "to": [14, 12, 14],
+      "faces": {
+        "down":  { "texture": "#wood", "uv": [0,0,12,12] },
+        "up":    { "texture": "#gold", "uv": [0,0,12,12] },
+        "north": { "texture": "#wood", "uv": [0,0,12,4] },
+        "south": { "texture": "#wood", "uv": [0,0,12,4] },
+        "west":  { "texture": "#wood", "uv": [0,0,12,4] },
+        "east":  { "texture": "#wood", "uv": [0,0,12,4] }
+      }
+    },
+    {
+      "name": "auction_gavel_base",
+      "from": [5, 12, 5],
+      "to": [11, 14, 11],
+      "faces": {
+        "up":    { "texture": "#gold", "uv": [0,0,6,6] },
+        "north": { "texture": "#gold", "uv": [0,0,6,2] },
+        "south": { "texture": "#gold", "uv": [0,0,6,2] },
+        "west":  { "texture": "#gold", "uv": [0,0,6,2] },
+        "east":  { "texture": "#gold", "uv": [0,0,6,2] }
+      }
+    },
+    {
+      "name": "gavel_handle",
+      "from": [7, 14, 7],
+      "to": [9, 16, 9],
+      "faces": {
+        "up":    { "texture": "#wood", "uv": [0,0,2,2] },
+        "north": { "texture": "#wood", "uv": [0,0,2,2] },
+        "south": { "texture": "#wood", "uv": [0,0,2,2] },
+        "west":  { "texture": "#wood", "uv": [0,0,2,2] },
+        "east":  { "texture": "#wood", "uv": [0,0,2,2] }
+      }
+    },
+    {
+      "name": "cloth_drape",
+      "from": [0, 6, 0],
+      "to": [16, 8, 1],
+      "faces": {
+        "north": { "texture": "#cloth", "uv": [0,0,16,2] }
+      }
+    }
+  ]
+}

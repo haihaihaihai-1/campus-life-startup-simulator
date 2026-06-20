@@ -3,9 +3,17 @@ package com.campus;
 import com.campus.economy.MoneyCapability;
 import com.campus.economy.SkillCapability;
 import com.campus.blocks.CampusBlocks;
+import com.campus.gui.CampusContainers;
+import com.campus.gui.IncubatorScreen;
+import com.campus.gui.AuctionScreen;
+import com.campus.gui.CryptoScreen;
 import com.campus.items.CampusItems;
+import com.campus.network.NetworkHandler;
+import net.minecraft.client.gui.ScreenManager;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
@@ -19,10 +27,12 @@ public class CampusLife {
 
     public CampusLife() {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
 
         CampusItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         CampusBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         CampusBlocks.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        CampusContainers.CONTAINERS.register(FMLJavaModLoadingContext.get().getModEventBus());
 
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -30,6 +40,13 @@ public class CampusLife {
     private void setup(final FMLCommonSetupEvent event) {
         MoneyCapability.register();
         SkillCapability.register();
-        LOGGER.info("Campus Life \u6821\u56ed\u521b\u4e1a\u6a21\u62df\u5668\u5df2\u52a0\u8f7d! \u7ecf\u6d4e\u7cfb\u7edf+\u521b\u4e1a\u5de5\u574a+\u5e02\u573a\u4ea4\u6613\u5df2\u5c31\u7eea!");
+        NetworkHandler.register();
+        LOGGER.info("Campus Life \u6821\u56ed\u521b\u4e1a\u6a21\u62df\u5668 v15: \u7f51\u7edc\u5305+GUI\u5bb9\u5668\u5df2\u5c31\u7eea!");
+    }
+
+    private void clientSetup(final FMLClientSetupEvent event) {
+        ScreenManager.register(CampusContainers.INCUBATOR_CONTAINER.get(), IncubatorScreen::new);
+        ScreenManager.register(CampusContainers.AUCTION_CONTAINER.get(), AuctionScreen::new);
+        ScreenManager.register(CampusContainers.CRYPTO_CONTAINER.get(), CryptoScreen::new);
     }
 }

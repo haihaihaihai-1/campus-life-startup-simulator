@@ -1,6 +1,77 @@
 {
-  "parent": "block/cube_all",
+  "parent": "block/block",
   "textures": {
-    "all": "campuslife:block/chair"
-  }
+    "wood":   "campuslife:block/chair_wood",
+    "cushion":"campuslife:block/chair_cushion"
+  },
+  "elements": [
+    {
+      "name": "seat",
+      "from": [2, 6, 2],
+      "to": [14, 8, 14],
+      "faces": {
+        "down":  { "texture": "#wood",    "uv": [0,0,12,12] },
+        "up":    { "texture": "#cushion", "uv": [0,0,12,12] },
+        "north": { "texture": "#wood",    "uv": [0,0,12,2] },
+        "south": { "texture": "#wood",    "uv": [0,0,12,2] },
+        "west":  { "texture": "#wood",    "uv": [0,0,12,2] },
+        "east":  { "texture": "#wood",    "uv": [0,0,12,2] }
+      }
+    },
+    {
+      "name": "backrest",
+      "from": [2, 8, 2],
+      "to": [14, 14, 3],
+      "faces": {
+        "north": { "texture": "#wood", "uv": [0,0,12,6] },
+        "south": { "texture": "#wood", "uv": [0,0,12,6] },
+        "west":  { "texture": "#wood", "uv": [0,0,1,6] },
+        "east":  { "texture": "#wood", "uv": [0,0,1,6] }
+      }
+    },
+    {
+      "name": "leg_nw",
+      "from": [2, 0, 2],
+      "to": [4, 6, 4],
+      "faces": {
+        "north": { "texture": "#wood", "uv": [0,0,2,6] },
+        "south": { "texture": "#wood", "uv": [0,0,2,6] },
+        "west":  { "texture": "#wood", "uv": [0,0,2,6] },
+        "east":  { "texture": "#wood", "uv": [0,0,2,6] }
+      }
+    },
+    {
+      "name": "leg_ne",
+      "from": [12, 0, 2],
+      "to": [14, 6, 4],
+      "faces": {
+        "north": { "texture": "#wood", "uv": [0,0,2,6] },
+        "south": { "texture": "#wood", "uv": [0,0,2,6] },
+        "west":  { "texture": "#wood", "uv": [0,0,2,6] },
+        "east":  { "texture": "#wood", "uv": [0,0,2,6] }
+      }
+    },
+    {
+      "name": "leg_sw",
+      "from": [2, 0, 12],
+      "to": [4, 6, 14],
+      "faces": {
+        "north": { "texture": "#wood", "uv": [0,0,2,6] },
+        "south": { "texture": "#wood", "uv": [0,0,2,6] },
+        "west":  { "texture": "#wood", "uv": [0,0,2,6] },
+        "east":  { "texture": "#wood", "uv": [0,0,2,6] }
+      }
+    },
+    {
+      "name": "leg_se",
+      "from": [12, 0, 12],
+      "to": [14, 6, 14],
+      "faces": {
+        "north": { "texture": "#wood", "uv": [0,0,2,6] },
+        "south": { "texture": "#wood", "uv": [0,0,2,6] },
+        "west":  { "texture": "#wood", "uv": [0,0,2,6] },
+        "east":  { "texture": "#wood", "uv": [0,0,2,6] }
+      }
+    }
+  ]
 }

@@ -1,0 +1,44 @@
+{
+  "parent": "block/block",
+  "textures": {
+    "metal":  "campuslife:block/crypto_miner_metal",
+    "fan":    "campuslife:block/crypto_miner_fan",
+    "led":    "campuslife:block/crypto_miner_led",
+    "side":   "campuslife:block/crypto_miner_side"
+  },
+  "elements": [
+    {
+      "name": "body",
+      "from": [1, 0, 1],
+      "to": [15, 14, 15],
+      "faces": {
+        "down":  { "texture": "#metal", "uv": [0,0,14,14] },
+        "up":    { "texture": "#metal", "uv": [0,0,14,14] },
+        "north": { "texture": "#side",  "uv": [0,0,14,14] },
+        "south": { "texture": "#side",  "uv": [0,0,14,14] },
+        "west":  { "texture": "#metal", "uv": [0,0,14,14] },
+        "east":  { "texture": "#metal", "uv": [0,0,14,14] }
+      }
+    },
+    {
+      "name": "fan_top",
+      "from": [4, 14, 4],
+      "to": [12, 16, 12],
+      "faces": {
+        "up":    { "texture": "#fan", "uv": [0,0,8,8] },
+        "north": { "texture": "#metal", "uv": [0,0,8,2] },
+        "south": { "texture": "#metal", "uv": [0,0,8,2] },
+        "west":  { "texture": "#metal", "uv": [0,0,8,2] },
+        "east":  { "texture": "#metal", "uv": [0,0,8,2] }
+      }
+    },
+    {
+      "name": "led_strip",
+      "from": [1, 2, 0],
+      "to": [15, 4, 1],
+      "faces": {
+        "north": { "texture": "#led", "uv": [0,0,14,2] }
+      }
+    }
+  ]
+}

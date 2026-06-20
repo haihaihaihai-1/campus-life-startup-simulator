@@ -63,6 +63,19 @@ public class CampusBlocks {
             registerBlock("coffee_machine", () -> new Block(Block.Properties.of(Material.METAL)
                     .strength(2.0f, 6.0f).sound(SoundType.METAL)));
 
+    // === GUI 交互方块（B 方案 + 扩展）===
+    public static final RegistryObject<Block> INCUBATOR =
+            registerBlock("incubator", () -> new IncubatorBlock(Block.Properties.of(Material.METAL)
+                    .strength(3.0f, 8.0f).sound(SoundType.METAL).lightLevel(s -> 8)));
+
+    public static final RegistryObject<Block> AUCTION_BLOCK =
+            registerBlock("auction_block", () -> new AuctionBlock(Block.Properties.of(Material.WOOD)
+                    .strength(3.0f, 5.0f).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> CRYPTO_MINER =
+            registerBlock("crypto_miner", () -> new CryptoMinerBlock(Block.Properties.of(Material.METAL)
+                    .strength(2.5f, 6.0f).sound(SoundType.METAL).lightLevel(s -> 6)));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         ITEMS.register(name, () -> new BlockItem(toReturn.get(),
