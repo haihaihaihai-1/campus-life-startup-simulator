@@ -24,7 +24,7 @@ public class RealtyScreen extends ContainerScreen<RealtyContainer> {
             final int idx = i + 1;
             RealEstateSystem.Property p = RealEstateSystem.PROPERTIES[i];
             this.addButton(new Button(this.leftPos + 6, this.topPos + 22 + i*22, 100, 20,
-                new StringTextComponent("\u00a7e" + p.name + " \u00a76\u00a5" + p.price),
+                new StringTextComponent("\u00a7e" + p.name + " \u00a76\u00a5" + p.purchasePrice),
                 b -> {}));
             this.addButton(new Button(this.leftPos + 108, this.topPos + 22 + i*22, 30, 20,
                 new StringTextComponent("\u00a7a\u4e70"),
