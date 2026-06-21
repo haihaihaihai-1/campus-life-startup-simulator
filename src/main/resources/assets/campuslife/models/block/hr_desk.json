@@ -1,0 +1,36 @@
+{
+  "credit": "v17 - EmployeeSystem hr_desk",
+  "textures": {
+    "wood": "campuslife:block/hr_desk_wood",
+    "screen": "campuslife:block/hr_desk_screen",
+    "folder": "campuslife:block/hr_desk_folder",
+    "particle": "campuslife:block/hr_desk_wood"
+  },
+  "elements": [
+    { "from": [0, 0, 0], "to": [16, 12, 16],
+      "faces": {
+        "north": {"uv":[0,0,16,12], "texture":"#wood"},
+        "south": {"uv":[0,0,16,12], "texture":"#wood"},
+        "east":  {"uv":[0,0,16,12], "texture":"#wood"},
+        "west":  {"uv":[0,0,16,12], "texture":"#wood"},
+        "up":    {"uv":[0,0,16,16], "texture":"#wood"},
+        "down":  {"uv":[0,0,16,16], "texture":"#wood"}
+      }
+    },
+    { "from": [2, 12, 4], "to": [10, 16, 8],
+      "faces": {
+        "north": {"uv":[0,0,8,4],  "texture":"#screen"},
+        "south": {"uv":[0,0,8,4],  "texture":"#screen"},
+        "east":  {"uv":[0,0,4,4],  "texture":"#screen"},
+        "west":  {"uv":[0,0,4,4],  "texture":"#screen"},
+        "up":    {"uv":[0,0,8,4],  "texture":"#screen"}
+      }
+    },
+    { "from": [11, 12, 5], "to": [15, 13, 12],
+      "faces": {
+        "up":   {"uv":[0,0,4,7], "texture":"#folder"},
+        "north":{"uv":[0,0,4,1], "texture":"#folder"}
+      }
+    }
+  ]
+}

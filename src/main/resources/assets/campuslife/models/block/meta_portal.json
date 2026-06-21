@@ -1,0 +1,26 @@
+{
+  "credit": "v17 - MetaverseSystem meta_portal",
+  "textures": {
+    "frame": "campuslife:block/meta_portal_frame",
+    "portal": "campuslife:block/meta_portal_portal",
+    "rune": "campuslife:block/meta_portal_rune",
+    "particle": "campuslife:block/meta_portal_portal"
+  },
+  "elements": [
+    { "from": [0, 0, 6], "to": [16, 2, 10],
+      "faces": {"north":{"uv":[0,0,16,2],"texture":"#frame"},"south":{"uv":[0,0,16,2],"texture":"#frame"},"up":{"uv":[0,0,16,4],"texture":"#rune"},"down":{"uv":[0,0,16,4],"texture":"#frame"}}
+    },
+    { "from": [0, 14, 6], "to": [16, 16, 10],
+      "faces": {"north":{"uv":[0,0,16,2],"texture":"#frame"},"south":{"uv":[0,0,16,2],"texture":"#frame"},"up":{"uv":[0,0,16,4],"texture":"#frame"},"down":{"uv":[0,0,16,4],"texture":"#rune"}}
+    },
+    { "from": [0, 2, 6], "to": [2, 14, 10],
+      "faces": {"north":{"uv":[0,0,2,12],"texture":"#frame"},"south":{"uv":[0,0,2,12],"texture":"#frame"},"east":{"uv":[0,0,4,12],"texture":"#rune"},"west":{"uv":[0,0,4,12],"texture":"#frame"}}
+    },
+    { "from": [14, 2, 6], "to": [16, 14, 10],
+      "faces": {"north":{"uv":[0,0,2,12],"texture":"#frame"},"south":{"uv":[0,0,2,12],"texture":"#frame"},"east":{"uv":[0,0,4,12],"texture":"#frame"},"west":{"uv":[0,0,4,12],"texture":"#rune"}}
+    },
+    { "from": [2, 2, 7], "to": [14, 14, 9],
+      "faces": {"north":{"uv":[0,0,12,12],"texture":"#portal"},"south":{"uv":[0,0,12,12],"texture":"#portal"}}
+    }
+  ]
+}

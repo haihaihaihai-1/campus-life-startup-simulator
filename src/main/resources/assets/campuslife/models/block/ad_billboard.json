@@ -1,0 +1,21 @@
+{
+  "credit": "v17 - MarketingSystem ad_billboard",
+  "textures": {
+    "frame": "campuslife:block/ad_billboard_frame",
+    "ad": "campuslife:block/ad_billboard_ad",
+    "back": "campuslife:block/ad_billboard_back",
+    "particle": "campuslife:block/ad_billboard_frame"
+  },
+  "elements": [
+    { "from": [0, 0, 6], "to": [16, 16, 8],
+      "faces": {
+        "north": {"uv":[0,0,16,16], "texture":"#ad"},
+        "south": {"uv":[0,0,16,16], "texture":"#back"},
+        "east":  {"uv":[0,0,2,16],  "texture":"#frame"},
+        "west":  {"uv":[0,0,2,16],  "texture":"#frame"},
+        "up":    {"uv":[0,0,16,2],  "texture":"#frame"},
+        "down":  {"uv":[0,0,16,2],  "texture":"#frame"}
+      }
+    }
+  ]
+}

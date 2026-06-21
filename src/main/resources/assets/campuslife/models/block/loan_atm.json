@@ -1,0 +1,31 @@
+{
+  "credit": "v17 - LoanSystem ATM",
+  "textures": {
+    "metal": "campuslife:block/loan_atm_metal",
+    "screen": "campuslife:block/loan_atm_screen",
+    "slot": "campuslife:block/loan_atm_slot",
+    "particle": "campuslife:block/loan_atm_metal"
+  },
+  "elements": [
+    { "from": [1, 0, 1], "to": [15, 16, 4],
+      "faces": {
+        "north": {"uv":[0,0,16,16], "texture":"#metal"},
+        "south": {"uv":[0,0,16,16], "texture":"#metal"},
+        "east":  {"uv":[0,0,4,16],  "texture":"#metal"},
+        "west":  {"uv":[0,0,4,16],  "texture":"#metal"},
+        "up":    {"uv":[0,0,16,4],  "texture":"#metal"},
+        "down":  {"uv":[0,0,16,4],  "texture":"#metal"}
+      }
+    },
+    { "from": [3, 8, 4], "to": [13, 14, 4.5],
+      "faces": {
+        "north": {"uv":[0,0,16,12], "texture":"#screen"}
+      }
+    },
+    { "from": [5, 3, 4], "to": [11, 5, 4.5],
+      "faces": {
+        "north": {"uv":[0,8,12,12], "texture":"#slot"}
+      }
+    }
+  ]
+}

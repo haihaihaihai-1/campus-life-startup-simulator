@@ -53,4 +53,45 @@ public class CampusContainers {
         CONTAINERS.register("stock",
             () -> IForgeContainerType.create((windowId, inv, buf) ->
                 new StockContainer(windowId, inv, buf.readBlockPos())));
+
+    // === v17 新增 ===
+    public static final RegistryObject<ContainerType<LoanContainer>> LOAN_CONTAINER =
+        CONTAINERS.register("loan",
+            () -> IForgeContainerType.create((windowId, inv, buf) ->
+                new LoanContainer(windowId, inv, buf.readBlockPos())));
+
+    public static final RegistryObject<ContainerType<PatentContainer>> PATENT_CONTAINER =
+        CONTAINERS.register("patent",
+            () -> IForgeContainerType.create((windowId, inv, buf) ->
+                new PatentContainer(windowId, inv, buf.readBlockPos())));
+
+    public static final RegistryObject<ContainerType<MergerContainer>> MERGER_CONTAINER =
+        CONTAINERS.register("merger",
+            () -> IForgeContainerType.create((windowId, inv, buf) ->
+                new MergerContainer(windowId, inv, buf.readBlockPos())));
+
+    public static final RegistryObject<ContainerType<MarketingContainer>> MARKETING_CONTAINER =
+        CONTAINERS.register("marketing",
+            () -> IForgeContainerType.create((windowId, inv, buf) ->
+                new MarketingContainer(windowId, inv, buf.readBlockPos())));
+
+    public static final RegistryObject<ContainerType<RealtyContainer>> REALTY_CONTAINER =
+        CONTAINERS.register("realty",
+            () -> IForgeContainerType.create((windowId, inv, buf) ->
+                new RealtyContainer(windowId, inv, buf.readBlockPos())));
+
+    public static final RegistryObject<ContainerType<EmployeeContainer>> EMPLOYEE_CONTAINER =
+        CONTAINERS.register("employee",
+            () -> IForgeContainerType.create((windowId, inv, buf) ->
+                new EmployeeContainer(windowId, inv, buf.readBlockPos())));
+
+    public static final RegistryObject<ContainerType<MetaverseContainer>> METAVERSE_CONTAINER =
+        CONTAINERS.register("metaverse",
+            () -> IForgeContainerType.create((windowId, inv, buf) ->
+                new MetaverseContainer(windowId, inv, buf.readBlockPos())));
+
+    public static final RegistryObject<ContainerType<InsuranceContainer>> INSURANCE_CONTAINER =
+        CONTAINERS.register("insurance",
+            () -> IForgeContainerType.create((windowId, inv, buf) ->
+                new InsuranceContainer(windowId, inv, buf.readBlockPos())));
 }

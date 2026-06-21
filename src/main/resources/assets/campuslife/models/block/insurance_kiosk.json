@@ -1,0 +1,27 @@
+{
+  "credit": "v17 - InsuranceSystem insurance_kiosk",
+  "textures": {
+    "metal": "campuslife:block/insurance_kiosk_metal",
+    "screen": "campuslife:block/insurance_kiosk_screen",
+    "umbrella": "campuslife:block/insurance_kiosk_umbrella",
+    "particle": "campuslife:block/insurance_kiosk_metal"
+  },
+  "elements": [
+    { "from": [1, 0, 1], "to": [15, 16, 5],
+      "faces": {
+        "north":{"uv":[0,0,16,16],"texture":"#metal"},
+        "south":{"uv":[0,0,16,16],"texture":"#metal"},
+        "east":{"uv":[0,0,4,16],"texture":"#metal"},
+        "west":{"uv":[0,0,4,16],"texture":"#metal"},
+        "up":{"uv":[0,0,16,4],"texture":"#metal"},
+        "down":{"uv":[0,0,16,4],"texture":"#metal"}
+      }
+    },
+    { "from": [3, 8, 5], "to": [13, 14, 5.5],
+      "faces": {"north":{"uv":[0,0,12,8],"texture":"#screen"}}
+    },
+    { "from": [5, 2, 5], "to": [11, 6, 5.5],
+      "faces": {"north":{"uv":[0,0,8,6],"texture":"#umbrella"}}
+    }
+  ]
+}

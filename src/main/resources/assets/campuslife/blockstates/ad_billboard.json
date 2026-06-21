@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "campuslife:block/ad_billboard" },
+    "facing=south": { "model": "campuslife:block/ad_billboard", "y": 180 },
+    "facing=east":  { "model": "campuslife:block/ad_billboard", "y": 90  },
+    "facing=west":  { "model": "campuslife:block/ad_billboard", "y": 270 }
+  }
+}

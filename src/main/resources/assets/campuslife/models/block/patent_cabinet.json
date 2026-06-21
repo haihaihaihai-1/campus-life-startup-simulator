@@ -1,0 +1,30 @@
+{
+  "credit": "v17 - PatentSystem patent_cabinet",
+  "textures": {
+    "wood": "campuslife:block/patent_cabinet_wood",
+    "scroll": "campuslife:block/patent_cabinet_scroll",
+    "seal": "campuslife:block/patent_cabinet_seal",
+    "particle": "campuslife:block/patent_cabinet_wood"
+  },
+  "elements": [
+    { "from": [0, 0, 0], "to": [16, 16, 16],
+      "faces": {
+        "north": {"uv":[0,0,16,16], "texture":"#wood"},
+        "south": {"uv":[0,0,16,16], "texture":"#wood"},
+        "east":  {"uv":[0,0,16,16], "texture":"#wood"},
+        "west":  {"uv":[0,0,16,16], "texture":"#wood"},
+        "up":    {"uv":[0,0,16,16], "texture":"#wood"},
+        "down":  {"uv":[0,0,16,16], "texture":"#wood"}
+      }
+    },
+    { "from": [2, 2, 0], "to": [7, 14, 0.5],
+      "faces": {"north": {"uv":[0,0,5,12], "texture":"#scroll"}}
+    },
+    { "from": [9, 2, 0], "to": [14, 14, 0.5],
+      "faces": {"north": {"uv":[0,0,5,12], "texture":"#scroll"}}
+    },
+    { "from": [6, 6, 0], "to": [10, 10, 0.5],
+      "faces": {"north": {"uv":[0,0,4,4], "texture":"#seal"}}
+    }
+  ]
+}

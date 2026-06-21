@@ -1,0 +1,30 @@
+{
+  "credit": "v17 - MergerSystem merger_table",
+  "textures": {
+    "marble": "campuslife:block/merger_table_marble",
+    "leather": "campuslife:block/merger_table_leather",
+    "documents": "campuslife:block/merger_table_docs",
+    "particle": "campuslife:block/merger_table_marble"
+  },
+  "elements": [
+    { "from": [0, 12, 0], "to": [16, 14, 16],
+      "faces": {
+        "north": {"uv":[0,0,16,2],  "texture":"#marble"},
+        "south": {"uv":[0,0,16,2],  "texture":"#marble"},
+        "east":  {"uv":[0,0,16,2],  "texture":"#marble"},
+        "west":  {"uv":[0,0,16,2],  "texture":"#marble"},
+        "up":    {"uv":[0,0,16,16], "texture":"#marble"},
+        "down":  {"uv":[0,0,16,16], "texture":"#marble"}
+      }
+    },
+    { "from": [1, 0, 1], "to": [3, 12, 3],
+      "faces": {"north":{"uv":[0,0,2,12],"texture":"#marble"},"south":{"uv":[0,0,2,12],"texture":"#marble"},"east":{"uv":[0,0,2,12],"texture":"#marble"},"west":{"uv":[0,0,2,12],"texture":"#marble"}}
+    },
+    { "from": [13, 0, 13], "to": [15, 12, 15],
+      "faces": {"north":{"uv":[0,0,2,12],"texture":"#marble"},"south":{"uv":[0,0,2,12],"texture":"#marble"},"east":{"uv":[0,0,2,12],"texture":"#marble"},"west":{"uv":[0,0,2,12],"texture":"#marble"}}
+    },
+    { "from": [5, 14, 5], "to": [11, 14.5, 11],
+      "faces": {"up":{"uv":[0,0,6,6],"texture":"#documents"}}
+    }
+  ]
+}

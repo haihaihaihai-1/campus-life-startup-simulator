@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "campuslife:block/loan_atm" },
+    "facing=south": { "model": "campuslife:block/loan_atm", "y": 180 },
+    "facing=east":  { "model": "campuslife:block/loan_atm", "y": 90  },
+    "facing=west":  { "model": "campuslife:block/loan_atm", "y": 270 }
+  }
+}

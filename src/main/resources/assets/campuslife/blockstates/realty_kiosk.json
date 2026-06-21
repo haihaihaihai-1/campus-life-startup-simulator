@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "campuslife:block/realty_kiosk" },
+    "facing=south": { "model": "campuslife:block/realty_kiosk", "y": 180 },
+    "facing=east":  { "model": "campuslife:block/realty_kiosk", "y": 90  },
+    "facing=west":  { "model": "campuslife:block/realty_kiosk", "y": 270 }
+  }
+}

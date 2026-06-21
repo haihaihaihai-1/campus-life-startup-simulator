@@ -1,0 +1,27 @@
+{
+  "credit": "v17 - RealEstateSystem realty_kiosk",
+  "textures": {
+    "wood": "campuslife:block/realty_kiosk_wood",
+    "map": "campuslife:block/realty_kiosk_map",
+    "key": "campuslife:block/realty_kiosk_key",
+    "particle": "campuslife:block/realty_kiosk_wood"
+  },
+  "elements": [
+    { "from": [0, 0, 0], "to": [16, 8, 16],
+      "faces": {
+        "north": {"uv":[0,0,16,8], "texture":"#wood"},
+        "south": {"uv":[0,0,16,8], "texture":"#wood"},
+        "east":  {"uv":[0,0,16,8], "texture":"#wood"},
+        "west":  {"uv":[0,0,16,8], "texture":"#wood"},
+        "up":    {"uv":[0,0,16,16],"texture":"#map"},
+        "down":  {"uv":[0,0,16,16],"texture":"#wood"}
+      }
+    },
+    { "from": [3, 8, 3], "to": [13, 14, 4],
+      "faces": {
+        "north": {"uv":[0,0,10,6], "texture":"#key"},
+        "south": {"uv":[0,0,10,6], "texture":"#key"}
+      }
+    }
+  ]
+}

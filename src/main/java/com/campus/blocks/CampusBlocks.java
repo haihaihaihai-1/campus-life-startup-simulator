@@ -97,6 +97,39 @@ public class CampusBlocks {
             registerBlock("stock_ticker", () -> new StockTickerBlock(Block.Properties.of(Material.METAL)
                     .strength(2.0f, 5.0f).sound(SoundType.METAL).lightLevel(s -> 9)));
 
+    // === v17: 8 个新 GUI 方块 ===
+    public static final RegistryObject<Block> LOAN_ATM =
+            registerBlock("loan_atm", () -> new LoanAtmBlock(Block.Properties.of(Material.METAL)
+                    .strength(3.0f, 8.0f).sound(SoundType.METAL).lightLevel(s -> 7)));
+
+    public static final RegistryObject<Block> PATENT_CABINET =
+            registerBlock("patent_cabinet", () -> new PatentCabinetBlock(Block.Properties.of(Material.WOOD)
+                    .strength(2.5f, 4.0f).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> MERGER_TABLE =
+            registerBlock("merger_table", () -> new MergerTableBlock(Block.Properties.of(Material.STONE)
+                    .strength(3.5f, 8.0f).sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> AD_BILLBOARD =
+            registerBlock("ad_billboard", () -> new AdBillboardBlock(Block.Properties.of(Material.METAL)
+                    .strength(2.0f, 4.0f).sound(SoundType.METAL).lightLevel(s -> 10)));
+
+    public static final RegistryObject<Block> REALTY_KIOSK =
+            registerBlock("realty_kiosk", () -> new RealtyKioskBlock(Block.Properties.of(Material.WOOD)
+                    .strength(2.5f, 4.0f).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> HR_DESK =
+            registerBlock("hr_desk", () -> new HRDeskBlock(Block.Properties.of(Material.WOOD)
+                    .strength(2.5f, 4.0f).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> META_PORTAL =
+            registerBlock("meta_portal", () -> new MetaPortalBlock(Block.Properties.of(Material.METAL)
+                    .strength(3.0f, 10.0f).sound(SoundType.METAL).lightLevel(s -> 14)));
+
+    public static final RegistryObject<Block> INSURANCE_KIOSK =
+            registerBlock("insurance_kiosk", () -> new InsuranceKioskBlock(Block.Properties.of(Material.METAL)
+                    .strength(2.5f, 5.0f).sound(SoundType.METAL).lightLevel(s -> 6)));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         ITEMS.register(name, () -> new BlockItem(toReturn.get(),

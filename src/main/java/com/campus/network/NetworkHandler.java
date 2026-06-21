@@ -186,6 +186,52 @@ public class NetworkHandler {
                     case "stock_sell":
                         com.campus.systems.StockMarketSystem.sell(player, pkt.param + 1, 1);
                         break;
+                    // === v17 新增 ===
+                    case "loan_take":
+                        com.campus.systems.LoanSystem.takeLoan(player, pkt.param);
+                        break;
+                    case "loan_repay":
+                        com.campus.systems.LoanSystem.repayLoan(player, pkt.param);
+                        break;
+                    case "patent_file":
+                        com.campus.systems.PatentSystem.filePatent(player);
+                        break;
+                    case "merger_acquire":
+                        com.campus.systems.MergerSystem.acquire(player, pkt.param);
+                        break;
+                    case "realty_buy":
+                        com.campus.systems.RealEstateSystem.buy(player, pkt.param);
+                        break;
+                    case "realty_sell":
+                        com.campus.systems.RealEstateSystem.sell(player, pkt.param);
+                        break;
+                    case "metaverse_buy":
+                        com.campus.systems.MetaverseSystem.buy(player, pkt.param);
+                        break;
+                    case "insurance_buy":
+                        com.campus.systems.InsuranceSystem.buy(player, pkt.param);
+                        break;
+                    default:
+                        // marketing_<idx> -> 处理营销
+                        if (pkt.action.startsWith("marketing_")) {
+                            try {
+                                int mIdx = Integer.parseInt(pkt.action.substring("marketing_".length()));
+                                com.campus.systems.MarketingSystem.AdType type =
+                                    com.campus.systems.MarketingSystem.getTypeByIndex(mIdx);
+                                if (type != null) {
+                                    com.campus.systems.MarketingSystem.launchCampaign(player, type, pkt.param);
+                                }
+                            } catch (NumberFormatException ignore) {}
+                        } else if (pkt.action.startsWith("employee_hire_")) {
+                            try {
+                                int eIdx = Integer.parseInt(pkt.action.substring("employee_hire_".length()));
+                                if (eIdx >= 0 && eIdx < com.campus.systems.EmployeeSystem.EMPLOYEE_TYPES.length) {
+                                    com.campus.systems.EmployeeSystem.hire(player,
+                                        com.campus.systems.EmployeeSystem.EMPLOYEE_TYPES[eIdx].type);
+                                }
+                            } catch (NumberFormatException ignore) {}
+                        }
+                        break;
                 }
             });
             ctx.get().setPacketHandled(true);

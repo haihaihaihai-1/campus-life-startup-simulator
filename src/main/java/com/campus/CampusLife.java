@@ -12,6 +12,14 @@ import com.campus.gui.ESGScreen;
 import com.campus.gui.IPOScreen;
 import com.campus.gui.VCScreen;
 import com.campus.gui.StockScreen;
+import com.campus.gui.LoanScreen;
+import com.campus.gui.PatentScreen;
+import com.campus.gui.MergerScreen;
+import com.campus.gui.MarketingScreen;
+import com.campus.gui.RealtyScreen;
+import com.campus.gui.EmployeeScreen;
+import com.campus.gui.MetaverseScreen;
+import com.campus.gui.InsuranceScreen;
 import com.campus.items.CampusItems;
 import com.campus.network.NetworkHandler;
 import net.minecraft.client.gui.ScreenManager;
@@ -58,5 +66,14 @@ public class CampusLife {
         ScreenManager.register(CampusContainers.IPO_CONTAINER.get(), IPOScreen::new);
         ScreenManager.register(CampusContainers.VC_CONTAINER.get(), VCScreen::new);
         ScreenManager.register(CampusContainers.STOCK_CONTAINER.get(), StockScreen::new);
+        // v17 新增
+        ScreenManager.register(CampusContainers.LOAN_CONTAINER.get(), LoanScreen::new);
+        ScreenManager.register(CampusContainers.PATENT_CONTAINER.get(), PatentScreen::new);
+        ScreenManager.register(CampusContainers.MERGER_CONTAINER.get(), MergerScreen::new);
+        ScreenManager.register(CampusContainers.MARKETING_CONTAINER.get(), MarketingScreen::new);
+        ScreenManager.register(CampusContainers.REALTY_CONTAINER.get(), RealtyScreen::new);
+        ScreenManager.register(CampusContainers.EMPLOYEE_CONTAINER.get(), EmployeeScreen::new);
+        ScreenManager.register(CampusContainers.METAVERSE_CONTAINER.get(), MetaverseScreen::new);
+        ScreenManager.register(CampusContainers.INSURANCE_CONTAINER.get(), InsuranceScreen::new);
     }
 }
