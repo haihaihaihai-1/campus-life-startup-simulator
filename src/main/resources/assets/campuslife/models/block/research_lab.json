@@ -1,0 +1,39 @@
+{
+  "credit": "campuslife v19 research_lab",
+  "textures": {
+    "particle": "campuslife:block/research_lab_top",
+    "side": "campuslife:block/research_lab_side",
+    "top": "campuslife:block/research_lab_top",
+    "tube": "campuslife:block/research_lab_tube"
+  },
+  "elements": [
+    { "from": [0, 0, 0], "to": [16, 12, 16],
+      "faces": {
+        "north": { "texture": "#side" }, "south": { "texture": "#side" },
+        "east": { "texture": "#side" }, "west": { "texture": "#side" },
+        "up": { "texture": "#top" }, "down": { "texture": "#side" }
+      }
+    },
+    { "from": [3, 12, 3], "to": [6, 16, 6],
+      "faces": {
+        "north": { "texture": "#tube" }, "south": { "texture": "#tube" },
+        "east": { "texture": "#tube" }, "west": { "texture": "#tube" },
+        "up": { "texture": "#tube" }
+      }
+    },
+    { "from": [10, 12, 3], "to": [13, 16, 6],
+      "faces": {
+        "north": { "texture": "#tube" }, "south": { "texture": "#tube" },
+        "east": { "texture": "#tube" }, "west": { "texture": "#tube" },
+        "up": { "texture": "#tube" }
+      }
+    },
+    { "from": [3, 12, 10], "to": [13, 14, 13],
+      "faces": {
+        "north": { "texture": "#top" }, "south": { "texture": "#top" },
+        "east": { "texture": "#top" }, "west": { "texture": "#top" },
+        "up": { "texture": "#top" }
+      }
+    }
+  ]
+}

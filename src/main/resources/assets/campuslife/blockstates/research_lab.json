@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "campuslife:block/research_lab" },
+    "facing=south": { "model": "campuslife:block/research_lab", "y": 180 },
+    "facing=east":  { "model": "campuslife:block/research_lab", "y": 90  },
+    "facing=west":  { "model": "campuslife:block/research_lab", "y": 270 }
+  }
+}

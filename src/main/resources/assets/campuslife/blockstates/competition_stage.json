@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "campuslife:block/competition_stage" },
+    "facing=south": { "model": "campuslife:block/competition_stage", "y": 180 },
+    "facing=east":  { "model": "campuslife:block/competition_stage", "y": 90  },
+    "facing=west":  { "model": "campuslife:block/competition_stage", "y": 270 }
+  }
+}

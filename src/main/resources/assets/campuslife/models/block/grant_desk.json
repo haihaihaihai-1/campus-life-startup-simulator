@@ -1,0 +1,33 @@
+{
+  "credit": "campuslife v19 grant_desk",
+  "textures": {
+    "particle": "campuslife:block/grant_desk_top",
+    "wood": "campuslife:block/grant_desk_wood",
+    "paper": "campuslife:block/grant_desk_paper",
+    "seal": "campuslife:block/grant_desk_seal",
+    "top": "campuslife:block/grant_desk_top"
+  },
+  "elements": [
+    { "from": [0, 0, 0], "to": [16, 10, 16],
+      "faces": {
+        "north": { "texture": "#wood" }, "south": { "texture": "#wood" },
+        "east": { "texture": "#wood" }, "west": { "texture": "#wood" },
+        "up": { "texture": "#top" }, "down": { "texture": "#wood" }
+      }
+    },
+    { "from": [2, 10, 2], "to": [14, 11, 14],
+      "faces": {
+        "north": { "texture": "#paper" }, "south": { "texture": "#paper" },
+        "east": { "texture": "#paper" }, "west": { "texture": "#paper" },
+        "up": { "texture": "#paper" }
+      }
+    },
+    { "from": [5, 11, 5], "to": [11, 14, 11],
+      "faces": {
+        "north": { "texture": "#seal" }, "south": { "texture": "#seal" },
+        "east": { "texture": "#seal" }, "west": { "texture": "#seal" },
+        "up": { "texture": "#seal" }
+      }
+    }
+  ]
+}

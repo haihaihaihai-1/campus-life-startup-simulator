@@ -242,6 +242,37 @@ public class NetworkHandler {
                     case "court_file":
                         com.campus.systems.LawsuitSystem.file(player, "defendant", pkt.param);
                         break;
+                    // === v19 新增 ===
+                    case "investor_request":
+                        com.campus.systems.InvestorSystem.requestFunding(player, pkt.param);
+                        break;
+                    case "grant_apply":
+                        com.campus.systems.GrantSystem.applyGrant(player, pkt.param);
+                        break;
+                    case "crm_acquire":
+                        com.campus.systems.CRMSystem.acquire(player, pkt.param);
+                        break;
+                    case "competition_join":
+                        com.campus.systems.CompetitionSystem.joinCompetition(player);
+                        break;
+                    case "competition_score":
+                        com.campus.systems.CompetitionSystem.addScore(player, pkt.param);
+                        break;
+                    case "research_unlock":
+                        if (pkt.param >= 0 && pkt.param < com.campus.systems.ResearchSystem.TECH_TREE.length) {
+                            com.campus.systems.ResearchSystem.unlockTech(player,
+                                com.campus.systems.ResearchSystem.TECH_TREE[pkt.param].name);
+                        }
+                        break;
+                    case "lab_run":
+                        com.campus.systems.LabSystem.run(player, pkt.param);
+                        break;
+                    case "mentor_consult":
+                        com.campus.systems.MentorSystem.consultMentor(player, pkt.param);
+                        break;
+                    case "trophy_show":
+                        com.campus.systems.AchievementSystem.showAchievements(player);
+                        break;
                     default:
                         // marketing_<idx> -> 处理营销
                         if (pkt.action.startsWith("marketing_")) {

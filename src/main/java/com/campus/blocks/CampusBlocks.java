@@ -163,6 +163,39 @@ public class CampusBlocks {
             registerBlock("court_bench", () -> new CourtBenchBlock(Block.Properties.of(Material.WOOD)
                     .strength(3.5f, 6.0f).sound(SoundType.WOOD)));
 
+    // === v19: 8 个新 GUI 方块 ===
+    public static final RegistryObject<Block> INVESTOR_OFFICE =
+            registerBlock("investor_office", () -> new InvestorOfficeBlock(Block.Properties.of(Material.WOOD)
+                    .strength(2.5f, 4.0f).sound(SoundType.WOOD).lightLevel(s -> 8)));
+
+    public static final RegistryObject<Block> GRANT_DESK =
+            registerBlock("grant_desk", () -> new GrantDeskBlock(Block.Properties.of(Material.WOOD)
+                    .strength(2.0f, 3.0f).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> CRM_TERMINAL =
+            registerBlock("crm_terminal", () -> new CRMTerminalBlock(Block.Properties.of(Material.METAL)
+                    .strength(2.5f, 5.0f).sound(SoundType.METAL).lightLevel(s -> 9)));
+
+    public static final RegistryObject<Block> COMPETITION_STAGE =
+            registerBlock("competition_stage", () -> new CompetitionStageBlock(Block.Properties.of(Material.WOOD)
+                    .strength(3.0f, 5.0f).sound(SoundType.WOOD).lightLevel(s -> 12)));
+
+    public static final RegistryObject<Block> RESEARCH_LAB =
+            registerBlock("research_lab", () -> new ResearchLabBlock(Block.Properties.of(Material.METAL)
+                    .strength(3.0f, 6.0f).sound(SoundType.METAL).lightLevel(s -> 6)));
+
+    public static final RegistryObject<Block> LAB_BENCH =
+            registerBlock("lab_bench", () -> new LabBenchBlock(Block.Properties.of(Material.METAL)
+                    .strength(2.5f, 4.0f).sound(SoundType.METAL).lightLevel(s -> 5)));
+
+    public static final RegistryObject<Block> MENTOR_CHAIR =
+            registerBlock("mentor_chair", () -> new MentorChairBlock(Block.Properties.of(Material.WOOD)
+                    .strength(2.0f, 3.0f).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> TROPHY_CASE =
+            registerBlock("trophy_case", () -> new TrophyCaseBlock(Block.Properties.of(Material.WOOD)
+                    .strength(2.0f, 4.0f).sound(SoundType.WOOD).lightLevel(s -> 4)));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         ITEMS.register(name, () -> new BlockItem(toReturn.get(),

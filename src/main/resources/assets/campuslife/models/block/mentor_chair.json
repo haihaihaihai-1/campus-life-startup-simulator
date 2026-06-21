@@ -1,0 +1,31 @@
+{
+  "credit": "campuslife v19 mentor_chair",
+  "textures": {
+    "particle": "campuslife:block/mentor_chair_leather",
+    "wood": "campuslife:block/mentor_chair_wood",
+    "leather": "campuslife:block/mentor_chair_leather"
+  },
+  "elements": [
+    { "from": [3, 0, 3], "to": [13, 6, 13],
+      "faces": {
+        "north": { "texture": "#wood" }, "south": { "texture": "#wood" },
+        "east": { "texture": "#wood" }, "west": { "texture": "#wood" },
+        "up": { "texture": "#wood" }, "down": { "texture": "#wood" }
+      }
+    },
+    { "from": [2, 6, 2], "to": [14, 8, 14],
+      "faces": {
+        "north": { "texture": "#leather" }, "south": { "texture": "#leather" },
+        "east": { "texture": "#leather" }, "west": { "texture": "#leather" },
+        "up": { "texture": "#leather" }
+      }
+    },
+    { "from": [2, 8, 1], "to": [14, 16, 3],
+      "faces": {
+        "north": { "texture": "#leather" }, "south": { "texture": "#leather" },
+        "east": { "texture": "#leather" }, "west": { "texture": "#leather" },
+        "up": { "texture": "#leather" }
+      }
+    }
+  ]
+}

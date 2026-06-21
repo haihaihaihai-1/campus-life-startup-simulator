@@ -1,0 +1,33 @@
+{
+  "credit": "campuslife v19 trophy_case",
+  "textures": {
+    "particle": "campuslife:block/trophy_case_wood",
+    "wood": "campuslife:block/trophy_case_wood",
+    "glass": "campuslife:block/trophy_case_glass",
+    "gold": "campuslife:block/trophy_case_gold"
+  },
+  "elements": [
+    { "from": [0, 0, 0], "to": [16, 1, 16],
+      "faces": {
+        "north": { "texture": "#wood" }, "south": { "texture": "#wood" },
+        "east": { "texture": "#wood" }, "west": { "texture": "#wood" },
+        "up": { "texture": "#wood" }, "down": { "texture": "#wood" }
+      }
+    },
+    { "from": [0, 1, 0], "to": [1, 15, 16],
+      "faces": { "north": { "texture": "#wood" }, "south": { "texture": "#wood" }, "east": { "texture": "#wood" }, "west": { "texture": "#wood" } }
+    },
+    { "from": [15, 1, 0], "to": [16, 15, 16],
+      "faces": { "north": { "texture": "#wood" }, "south": { "texture": "#wood" }, "east": { "texture": "#wood" }, "west": { "texture": "#wood" } }
+    },
+    { "from": [1, 1, 0], "to": [15, 15, 1],
+      "faces": { "north": { "texture": "#glass" }, "south": { "texture": "#glass" }, "up": { "texture": "#glass" } }
+    },
+    { "from": [7, 1, 6], "to": [9, 12, 8],
+      "faces": { "north": { "texture": "#gold" }, "south": { "texture": "#gold" }, "east": { "texture": "#gold" }, "west": { "texture": "#gold" }, "up": { "texture": "#gold" } }
+    },
+    { "from": [0, 15, 0], "to": [16, 16, 16],
+      "faces": { "north": { "texture": "#wood" }, "south": { "texture": "#wood" }, "east": { "texture": "#wood" }, "west": { "texture": "#wood" }, "up": { "texture": "#wood" } }
+    }
+  ]
+}

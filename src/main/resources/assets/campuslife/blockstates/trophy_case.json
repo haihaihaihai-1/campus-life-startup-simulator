@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "campuslife:block/trophy_case" },
+    "facing=south": { "model": "campuslife:block/trophy_case", "y": 180 },
+    "facing=east":  { "model": "campuslife:block/trophy_case", "y": 90  },
+    "facing=west":  { "model": "campuslife:block/trophy_case", "y": 270 }
+  }
+}

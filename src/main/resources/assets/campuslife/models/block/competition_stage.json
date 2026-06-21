@@ -1,0 +1,32 @@
+{
+  "credit": "campuslife v19 competition_stage",
+  "textures": {
+    "particle": "campuslife:block/competition_stage_floor",
+    "floor": "campuslife:block/competition_stage_floor",
+    "step": "campuslife:block/competition_stage_step",
+    "podium": "campuslife:block/competition_stage_podium"
+  },
+  "elements": [
+    { "from": [0, 0, 0], "to": [16, 2, 16],
+      "faces": {
+        "north": { "texture": "#floor" }, "south": { "texture": "#floor" },
+        "east": { "texture": "#floor" }, "west": { "texture": "#floor" },
+        "up": { "texture": "#floor" }, "down": { "texture": "#floor" }
+      }
+    },
+    { "from": [4, 2, 4], "to": [12, 4, 12],
+      "faces": {
+        "north": { "texture": "#step" }, "south": { "texture": "#step" },
+        "east": { "texture": "#step" }, "west": { "texture": "#step" },
+        "up": { "texture": "#step" }
+      }
+    },
+    { "from": [6, 4, 6], "to": [10, 10, 10],
+      "faces": {
+        "north": { "texture": "#podium" }, "south": { "texture": "#podium" },
+        "east": { "texture": "#podium" }, "west": { "texture": "#podium" },
+        "up": { "texture": "#podium" }
+      }
+    }
+  ]
+}

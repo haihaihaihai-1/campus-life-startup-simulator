@@ -28,6 +28,14 @@ import com.campus.gui.FranchiseScreen;
 import com.campus.gui.TaxScreen;
 import com.campus.gui.TrainingScreen;
 import com.campus.gui.CourtScreen;
+import com.campus.gui.InvestorScreen;
+import com.campus.gui.GrantScreen;
+import com.campus.gui.CRMScreen;
+import com.campus.gui.CompetitionScreen;
+import com.campus.gui.ResearchScreen;
+import com.campus.gui.LabScreen;
+import com.campus.gui.MentorScreen;
+import com.campus.gui.TrophyScreen;
 import com.campus.items.CampusItems;
 import com.campus.network.NetworkHandler;
 import net.minecraft.client.gui.ScreenManager;
@@ -92,5 +100,14 @@ public class CampusLife {
         ScreenManager.register(CampusContainers.TAX_CONTAINER.get(), TaxScreen::new);
         ScreenManager.register(CampusContainers.TRAINING_CONTAINER.get(), TrainingScreen::new);
         ScreenManager.register(CampusContainers.COURT_CONTAINER.get(), CourtScreen::new);
+        // v19 新增
+        ScreenManager.register(CampusContainers.INVESTOR_CONTAINER.get(), InvestorScreen::new);
+        ScreenManager.register(CampusContainers.GRANT_CONTAINER.get(), GrantScreen::new);
+        ScreenManager.register(CampusContainers.CRM_CONTAINER.get(), CRMScreen::new);
+        ScreenManager.register(CampusContainers.COMPETITION_CONTAINER.get(), CompetitionScreen::new);
+        ScreenManager.register(CampusContainers.RESEARCH_CONTAINER.get(), ResearchScreen::new);
+        ScreenManager.register(CampusContainers.LAB_CONTAINER.get(), LabScreen::new);
+        ScreenManager.register(CampusContainers.MENTOR_CONTAINER.get(), MentorScreen::new);
+        ScreenManager.register(CampusContainers.TROPHY_CONTAINER.get(), TrophyScreen::new);
     }
 }

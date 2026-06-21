@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "campuslife:block/mentor_chair" },
+    "facing=south": { "model": "campuslife:block/mentor_chair", "y": 180 },
+    "facing=east":  { "model": "campuslife:block/mentor_chair", "y": 90  },
+    "facing=west":  { "model": "campuslife:block/mentor_chair", "y": 270 }
+  }
+}
