@@ -94,4 +94,45 @@ public class CampusContainers {
         CONTAINERS.register("insurance",
             () -> IForgeContainerType.create((windowId, inv, buf) ->
                 new InsuranceContainer(windowId, inv, buf.readBlockPos())));
+
+    // === v18 新增 ===
+    public static final RegistryObject<ContainerType<TalentContainer>> TALENT_CONTAINER =
+        CONTAINERS.register("talent",
+            () -> IForgeContainerType.create((windowId, inv, buf) ->
+                new TalentContainer(windowId, inv, buf.readBlockPos())));
+
+    public static final RegistryObject<ContainerType<NotaryContainer>> NOTARY_CONTAINER =
+        CONTAINERS.register("notary",
+            () -> IForgeContainerType.create((windowId, inv, buf) ->
+                new NotaryContainer(windowId, inv, buf.readBlockPos())));
+
+    public static final RegistryObject<ContainerType<CarbonContainer>> CARBON_CONTAINER =
+        CONTAINERS.register("carbon",
+            () -> IForgeContainerType.create((windowId, inv, buf) ->
+                new CarbonContainer(windowId, inv, buf.readBlockPos())));
+
+    public static final RegistryObject<ContainerType<SupplyContainer>> SUPPLY_CONTAINER =
+        CONTAINERS.register("supply",
+            () -> IForgeContainerType.create((windowId, inv, buf) ->
+                new SupplyContainer(windowId, inv, buf.readBlockPos())));
+
+    public static final RegistryObject<ContainerType<FranchiseContainer>> FRANCHISE_CONTAINER =
+        CONTAINERS.register("franchise",
+            () -> IForgeContainerType.create((windowId, inv, buf) ->
+                new FranchiseContainer(windowId, inv, buf.readBlockPos())));
+
+    public static final RegistryObject<ContainerType<TaxContainer>> TAX_CONTAINER =
+        CONTAINERS.register("tax",
+            () -> IForgeContainerType.create((windowId, inv, buf) ->
+                new TaxContainer(windowId, inv, buf.readBlockPos())));
+
+    public static final RegistryObject<ContainerType<TrainingContainer>> TRAINING_CONTAINER =
+        CONTAINERS.register("training",
+            () -> IForgeContainerType.create((windowId, inv, buf) ->
+                new TrainingContainer(windowId, inv, buf.readBlockPos())));
+
+    public static final RegistryObject<ContainerType<CourtContainer>> COURT_CONTAINER =
+        CONTAINERS.register("court",
+            () -> IForgeContainerType.create((windowId, inv, buf) ->
+                new CourtContainer(windowId, inv, buf.readBlockPos())));
 }

@@ -211,6 +211,37 @@ public class NetworkHandler {
                     case "insurance_buy":
                         com.campus.systems.InsuranceSystem.buy(player, pkt.param);
                         break;
+                    // === v18 新增 ===
+                    case "talent_recruit":
+                        com.campus.systems.TalentMarketSystem.recruit(player, pkt.param);
+                        break;
+                    case "notary_save":
+                        com.campus.systems.BlockchainNotarySystem.notarize(player, "doc_" + pkt.param);
+                        break;
+                    case "carbon_buy":
+                        com.campus.systems.CarbonTradeSystem.buy(player, pkt.param);
+                        break;
+                    case "carbon_sell":
+                        com.campus.systems.CarbonTradeSystem.sell(player, pkt.param);
+                        break;
+                    case "supply_start":
+                        com.campus.systems.SupplyChainSystem.startProduction(player, pkt.param, 1);
+                        break;
+                    case "franchise_open":
+                        com.campus.systems.FranchiseSystem.open(player, pkt.param);
+                        break;
+                    case "tax_pay":
+                        com.campus.systems.TaxSystem.collectTax(player);
+                        break;
+                    case "tax_plan":
+                        com.campus.systems.TaxSystem.showTaxInfo(player);
+                        break;
+                    case "training_enroll":
+                        com.campus.systems.TrainingSystem.enroll(player, pkt.param);
+                        break;
+                    case "court_file":
+                        com.campus.systems.LawsuitSystem.file(player, "defendant", pkt.param);
+                        break;
                     default:
                         // marketing_<idx> -> 处理营销
                         if (pkt.action.startsWith("marketing_")) {

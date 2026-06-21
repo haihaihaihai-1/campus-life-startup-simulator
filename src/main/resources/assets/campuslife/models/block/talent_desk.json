@@ -1,0 +1,21 @@
+{
+  "credit": "v18 talent_desk",
+  "textures": {
+    "base": "campuslife:block/talent_desk_base",
+    "screen": "campuslife:block/talent_desk_screen",
+    "top": "campuslife:block/talent_desk_top",
+    "particle": "campuslife:block/talent_desk_base"
+  },
+  "elements": [
+    { "from": [0,0,0], "to": [16,8,16], "faces": {
+      "north": {"texture":"#base"}, "south":{"texture":"#base"},
+      "east":{"texture":"#base"}, "west":{"texture":"#base"},
+      "up":{"texture":"#top"}, "down":{"texture":"#base"}
+    }},
+    { "from": [2,8,10], "to": [14,14,12], "faces": {
+      "north":{"texture":"#screen"},"south":{"texture":"#screen"},
+      "east":{"texture":"#screen"},"west":{"texture":"#screen"},
+      "up":{"texture":"#screen"},"down":{"texture":"#screen"}
+    }}
+  ]
+}

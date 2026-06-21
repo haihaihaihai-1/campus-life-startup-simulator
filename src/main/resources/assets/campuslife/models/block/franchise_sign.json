@@ -1,0 +1,20 @@
+{
+  "credit": "v18 franchise_sign",
+  "textures": {
+    "pole": "campuslife:block/franchise_pole",
+    "sign": "campuslife:block/franchise_sign",
+    "particle": "campuslife:block/franchise_sign"
+  },
+  "elements": [
+    { "from": [7,0,7], "to": [9,10,9], "faces": {
+      "north":{"texture":"#pole"},"south":{"texture":"#pole"},
+      "east":{"texture":"#pole"},"west":{"texture":"#pole"},
+      "up":{"texture":"#pole"},"down":{"texture":"#pole"}
+    }},
+    { "from": [1,10,6], "to": [15,16,10], "faces": {
+      "north":{"texture":"#sign"},"south":{"texture":"#sign"},
+      "east":{"texture":"#sign"},"west":{"texture":"#sign"},
+      "up":{"texture":"#sign"},"down":{"texture":"#sign"}
+    }}
+  ]
+}

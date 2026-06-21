@@ -1,0 +1,21 @@
+{
+  "credit": "v18 supply_factory",
+  "textures": {
+    "wall": "campuslife:block/supply_wall",
+    "pipe": "campuslife:block/supply_pipe",
+    "top": "campuslife:block/supply_top",
+    "particle": "campuslife:block/supply_wall"
+  },
+  "elements": [
+    { "from": [0,0,0], "to": [16,12,16], "faces": {
+      "north":{"texture":"#wall"},"south":{"texture":"#wall"},
+      "east":{"texture":"#wall"},"west":{"texture":"#wall"},
+      "up":{"texture":"#top"},"down":{"texture":"#wall"}
+    }},
+    { "from": [6,12,6], "to": [10,16,10], "faces": {
+      "north":{"texture":"#pipe"},"south":{"texture":"#pipe"},
+      "east":{"texture":"#pipe"},"west":{"texture":"#pipe"},
+      "up":{"texture":"#pipe"},"down":{"texture":"#pipe"}
+    }}
+  ]
+}

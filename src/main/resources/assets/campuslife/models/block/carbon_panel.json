@@ -1,0 +1,26 @@
+{
+  "credit": "v18 carbon_panel",
+  "textures": {
+    "base": "campuslife:block/carbon_base",
+    "leaf": "campuslife:block/carbon_leaf",
+    "screen": "campuslife:block/carbon_screen",
+    "particle": "campuslife:block/carbon_base"
+  },
+  "elements": [
+    { "from": [0,0,0], "to": [16,4,16], "faces": {
+      "north":{"texture":"#base"},"south":{"texture":"#base"},
+      "east":{"texture":"#base"},"west":{"texture":"#base"},
+      "up":{"texture":"#base"},"down":{"texture":"#base"}
+    }},
+    { "from": [4,4,4], "to": [12,12,12], "faces": {
+      "north":{"texture":"#leaf"},"south":{"texture":"#leaf"},
+      "east":{"texture":"#leaf"},"west":{"texture":"#leaf"},
+      "up":{"texture":"#leaf"},"down":{"texture":"#leaf"}
+    }},
+    { "from": [3,12,3], "to": [13,16,13], "faces": {
+      "north":{"texture":"#screen"},"south":{"texture":"#screen"},
+      "east":{"texture":"#screen"},"west":{"texture":"#screen"},
+      "up":{"texture":"#screen"},"down":{"texture":"#screen"}
+    }}
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "credit": "v18 tax_office",
+  "textures": {
+    "wall": "campuslife:block/tax_wall",
+    "seal": "campuslife:block/tax_seal",
+    "top": "campuslife:block/tax_top",
+    "particle": "campuslife:block/tax_wall"
+  },
+  "elements": [
+    { "from": [0,0,0], "to": [16,14,16], "faces": {
+      "north":{"texture":"#wall"},"south":{"texture":"#wall"},
+      "east":{"texture":"#wall"},"west":{"texture":"#wall"},
+      "up":{"texture":"#top"},"down":{"texture":"#wall"}
+    }},
+    { "from": [3,4,15.5], "to": [13,11,16], "faces": {
+      "north":{"texture":"#seal"},"south":{"texture":"#seal"}
+    }}
+  ]
+}

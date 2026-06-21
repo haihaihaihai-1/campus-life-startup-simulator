@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "campuslife:block/training_podium" },
+    "facing=south": { "model": "campuslife:block/training_podium", "y": 180 },
+    "facing=east":  { "model": "campuslife:block/training_podium", "y": 90  },
+    "facing=west":  { "model": "campuslife:block/training_podium", "y": 270 }
+  }
+}

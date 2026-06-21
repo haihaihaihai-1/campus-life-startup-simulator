@@ -1,0 +1,21 @@
+{
+  "credit": "v18 court_bench",
+  "textures": {
+    "wood": "campuslife:block/court_wood",
+    "gavel": "campuslife:block/court_gavel",
+    "top": "campuslife:block/court_top",
+    "particle": "campuslife:block/court_wood"
+  },
+  "elements": [
+    { "from": [0,0,4], "to": [16,12,12], "faces": {
+      "north":{"texture":"#wood"},"south":{"texture":"#wood"},
+      "east":{"texture":"#wood"},"west":{"texture":"#wood"},
+      "up":{"texture":"#top"},"down":{"texture":"#wood"}
+    }},
+    { "from": [5,12,7], "to": [11,14,9], "faces": {
+      "north":{"texture":"#gavel"},"south":{"texture":"#gavel"},
+      "east":{"texture":"#gavel"},"west":{"texture":"#gavel"},
+      "up":{"texture":"#gavel"},"down":{"texture":"#gavel"}
+    }}
+  ]
+}

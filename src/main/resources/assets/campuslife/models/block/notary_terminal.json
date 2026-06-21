@@ -1,0 +1,21 @@
+{
+  "credit": "v18 notary_terminal",
+  "textures": {
+    "case": "campuslife:block/notary_case",
+    "led": "campuslife:block/notary_led",
+    "top": "campuslife:block/notary_top",
+    "particle": "campuslife:block/notary_case"
+  },
+  "elements": [
+    { "from": [1,0,1], "to": [15,12,15], "faces": {
+      "north":{"texture":"#case"},"south":{"texture":"#case"},
+      "east":{"texture":"#case"},"west":{"texture":"#case"},
+      "up":{"texture":"#top"},"down":{"texture":"#case"}
+    }},
+    { "from": [3,12,3], "to": [13,15,13], "faces": {
+      "north":{"texture":"#led"},"south":{"texture":"#led"},
+      "east":{"texture":"#led"},"west":{"texture":"#led"},
+      "up":{"texture":"#led"},"down":{"texture":"#led"}
+    }}
+  ]
+}

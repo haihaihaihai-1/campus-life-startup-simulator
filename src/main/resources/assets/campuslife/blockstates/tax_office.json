@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "campuslife:block/tax_office" },
+    "facing=south": { "model": "campuslife:block/tax_office", "y": 180 },
+    "facing=east":  { "model": "campuslife:block/tax_office", "y": 90  },
+    "facing=west":  { "model": "campuslife:block/tax_office", "y": 270 }
+  }
+}

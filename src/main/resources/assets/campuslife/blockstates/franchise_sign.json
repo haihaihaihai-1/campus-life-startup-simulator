@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "campuslife:block/franchise_sign" },
+    "facing=south": { "model": "campuslife:block/franchise_sign", "y": 180 },
+    "facing=east":  { "model": "campuslife:block/franchise_sign", "y": 90  },
+    "facing=west":  { "model": "campuslife:block/franchise_sign", "y": 270 }
+  }
+}
