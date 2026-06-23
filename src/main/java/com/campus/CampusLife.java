@@ -4,10 +4,12 @@ import com.campus.economy.MoneyCapability;
 import com.campus.economy.SkillCapability;
 import com.campus.blocks.CampusBlocks;
 import com.campus.items.CampusItems;
+import com.campus.client.ClientSetup;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.loading.FMLEnvironment;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -23,6 +25,13 @@ public class CampusLife {
         CampusItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         CampusBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         CampusBlocks.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        CampusBlocks.TILE_ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());
+        CampusBlocks.CONTAINERS.register(FMLJavaModLoadingContext.get().getModEventBus());
+
+        // 客户端注册 (安全: 仅客户端执行)
+        if (FMLEnvironment.dist.isClient()) {
+            FMLJavaModLoadingContext.get().getModEventBus().addListener(ClientSetup::setup);
+        }
 
         MinecraftForge.EVENT_BUS.register(this);
     }

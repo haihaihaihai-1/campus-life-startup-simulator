@@ -4,46 +4,57 @@ import com.campus.economy.MoneyCapability;
 import com.campus.economy.SkillCapability;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
-import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.network.NetworkHooks;
+
+import javax.annotation.Nullable;
 
 /**
- * 创业工坊方块 - 右键交互触发创业功能
- * 参考: Alchemistry 交互方块模式 + Forge Block 交互系统
+ * 创业工坊方块 - 右键打开GUI界面
+ * 参考模式: McJtyLib GenericGuiContainer (MIT) + Forge原生Container模式
  */
-public class StartupWorkbenchBlock extends Block {
+public class StartupWorkbenchBlock extends Block implements ITileEntityProvider {
 
     public StartupWorkbenchBlock(Properties properties) {
         super(properties);
     }
 
     @Override
+    public boolean hasTileEntity(BlockState state) {
+        return true;
+    }
+
+    @Nullable
+    @Override
+    public TileEntity newBlockEntity(IBlockReader world) {
+        return new StartupWorkbenchTileEntity(CampusBlocks.STARTUP_WORKBENCH_TE.get());
+    }
+
+    @Override
     public ActionResultType use(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockRayTraceResult hit) {
         if (!world.isClientSide) {
-            player.getCapability(MoneyCapability.MONEY_CAP).ifPresent(money -> {
-                player.getCapability(SkillCapability.SKILL_CAP).ifPresent(skill -> {
-                    player.sendMessage(new StringTextComponent(
-                            "\u00a76\u2500\u2500\u2500\u2500 \u521b\u4e1a\u5de5\u574a \u2500\u2500\u2500\u2500"), player.getUUID());
-                    player.sendMessage(new StringTextComponent(
-                            "\u00a7e\u5f53\u524d\u8d44\u91d1: \u00a76" + money.getMoney() + " \u91d1\u5e01"), player.getUUID());
-                    player.sendMessage(new StringTextComponent(
-                            "\u00a7e\u521b\u4e1a\u7b49\u7ea7: \u00a7f" + skill.getLevel() + " " + skill.getRank()), player.getUUID());
-                    player.sendMessage(new StringTextComponent(
-                            "\u00a7e\u521b\u4e1a\u7ecf\u9a8c: \u00a7f" + skill.getExp() + "/" + (skill.getLevel() * 100)), player.getUUID());
-                    player.sendMessage(new StringTextComponent(
-                            "\u00a7a\u8f93\u5165 /business invest <\u91d1\u989d> \u6295\u8d44\u521b\u4e1a"), player.getUUID());
-                    player.sendMessage(new StringTextComponent(
-                            "\u00a7a\u8f93\u5165 /market sell <\u7269\u54c1> <\u4ef7\u683c> \u4e0a\u67b6\u5546\u54c1"), player.getUUID());
-                    player.sendMessage(new StringTextComponent(
-                            "\u00a7a\u8f93\u5165 /money pay <\u73a9\u5bb6> <\u91d1\u989d> \u8f6c\u8d26"), player.getUUID());
+            TileEntity te = world.getBlockEntity(pos);
+            if (te instanceof StartupWorkbenchTileEntity) {
+                StartupWorkbenchTileEntity workbench = (StartupWorkbenchTileEntity) te;
+                player.getCapability(MoneyCapability.MONEY_CAP).ifPresent(money -> {
+                    player.getCapability(SkillCapability.SKILL_CAP).ifPresent(skill -> {
+                        workbench.updateData(money.getMoney(), skill.getLevel(), skill.getExp(),
+                            com.campus.systems.EmployeeSystem.calculateTotalEmployees(player.getUUID()));
+                    });
                 });
-            });
+                NetworkHooks.openGui((ServerPlayerEntity) player, workbench, pos);
+            }
+            return ActionResultType.CONSUME;
         }
-        return ActionResultType.sidedSuccess(world.isClientSide);
+        return ActionResultType.SUCCESS;
     }
 }
