@@ -1,6 +1,1 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "campuslife:block/bank_counter"
-  }
-}
+{"parent":"block/block","textures":{"top":"campuslife:block/bank_counter_top","side":"campuslife:block/bank_counter_side","bottom":"minecraft:block/stone"},"elements":[{"from":[0,0,0],"to":[16,8,16],"faces":{"down":{"texture":"#bottom"},"up":{"texture":"#top"},"north":{"texture":"#side"},"south":{"texture":"#side"},"west":{"texture":"#side"},"east":{"texture":"#side"}}},{"from":[0,8,0],"to":[16,12,2],"faces":{"up":{"texture":"#top"},"north":{"texture":"#side"},"west":{"texture":"#side"},"east":{"texture":"#side"}}}]}

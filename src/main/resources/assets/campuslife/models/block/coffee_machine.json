@@ -1,6 +1,1 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "campuslife:block/coffee_machine"
-  }
-}
+{"parent":"block/block","textures":{"top":"campuslife:block/coffee_machine_top","side":"campuslife:block/coffee_machine_side","bottom":"minecraft:block/iron_block"},"elements":[{"from":[2,0,2],"to":[14,10,14],"faces":{"down":{"texture":"#bottom"},"up":{"texture":"#top"},"north":{"texture":"#side"},"south":{"texture":"#side"},"west":{"texture":"#side"},"east":{"texture":"#side"}}},{"from":[4,10,4],"to":[12,14,12],"faces":{"up":{"texture":"#top"},"north":{"texture":"#side"},"south":{"texture":"#side"},"west":{"texture":"#side"},"east":{"texture":"#side"}}}]}

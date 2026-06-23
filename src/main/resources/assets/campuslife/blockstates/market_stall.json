@@ -1,7 +1,1 @@
-{
-  "variants": {
-    "": {
-      "model": "campuslife:block/market_stall"
-    }
-  }
-}
+{"variants":{"":{"model":"campuslife:block/market_stall"}}}

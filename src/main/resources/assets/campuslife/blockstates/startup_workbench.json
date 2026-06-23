@@ -1,7 +1,1 @@
-{
-  "variants": {
-    "": {
-      "model": "campuslife:block/startup_workbench"
-    }
-  }
-}
+{"variants":{"":{"model":"campuslife:block/startup_workbench"}}}

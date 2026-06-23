@@ -1,6 +1,1 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "campuslife:block/startup_workbench"
-  }
-}
+{"parent":"block/block","textures":{"top":"campuslife:block/startup_workbench_top","side":"campuslife:block/startup_workbench_side","bottom":"minecraft:block/oak_planks"},"elements":[{"from":[0,0,0],"to":[16,2,16],"faces":{"down":{"texture":"#bottom"},"up":{"texture":"#top"},"north":{"texture":"#side"},"south":{"texture":"#side"},"west":{"texture":"#side"},"east":{"texture":"#side"}}},{"from":[1,2,1],"to":[3,12,3],"faces":{"all":{"texture":"#side"}}},{"from":[13,2,1],"to":[15,12,3],"faces":{"all":{"texture":"#side"}}},{"from":[1,2,13],"to":[3,12,15],"faces":{"all":{"texture":"#side"}}},{"from":[13,2,13],"to":[15,12,15],"faces":{"all":{"texture":"#side"}}}]}

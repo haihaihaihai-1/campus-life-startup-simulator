@@ -1,7 +1,1 @@
-{
-  "variants": {
-    "": {
-      "model": "campuslife:block/bank_counter"
-    }
-  }
-}
+{"variants":{"":{"model":"campuslife:block/bank_counter"}}}
