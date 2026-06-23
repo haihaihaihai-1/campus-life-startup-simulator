@@ -70,16 +70,43 @@ public class CampusBlocks {
             CONTAINERS.register("startup_workbench", StartupWorkbenchContainer::createContainerType);
 
     public static final RegistryObject<Block> MARKET_STALL =
-            registerBlock("market_stall", () -> new Block(Block.Properties.of(Material.WOOD)
+            registerBlock("market_stall", () -> new MarketStallBlock(Block.Properties.of(Material.WOOD)
                     .strength(1.5f, 3.0f).sound(SoundType.WOOD)));
 
+    // 市场摊位 TileEntity (必须在MARKET_STALL之后)
+    public static final RegistryObject<TileEntityType<MarketStallTileEntity>> MARKET_STALL_TE =
+            TILE_ENTITIES.register("market_stall", () -> TileEntityType.Builder.of(
+                MarketStallTileEntity::create, MARKET_STALL.get()).build(null));
+
+    // 市场摊位 ContainerType
+    public static final RegistryObject<ContainerType<MarketStallContainer>> MARKET_STALL_CONTAINER =
+            CONTAINERS.register("market_stall", MarketStallContainer::createContainerType);
+
     public static final RegistryObject<Block> BANK_COUNTER =
-            registerBlock("bank_counter", () -> new Block(Block.Properties.of(Material.STONE)
+            registerBlock("bank_counter", () -> new BankCounterBlock(Block.Properties.of(Material.STONE)
                     .strength(3.5f, 10.0f).sound(SoundType.STONE)));
 
+    // 银行柜台 TileEntity (必须在BANK_COUNTER之后)
+    public static final RegistryObject<TileEntityType<BankCounterTileEntity>> BANK_COUNTER_TE =
+            TILE_ENTITIES.register("bank_counter", () -> TileEntityType.Builder.of(
+                BankCounterTileEntity::create, BANK_COUNTER.get()).build(null));
+
+    // 银行柜台 ContainerType
+    public static final RegistryObject<ContainerType<BankCounterContainer>> BANK_COUNTER_CONTAINER =
+            CONTAINERS.register("bank_counter", BankCounterContainer::createContainerType);
+
     public static final RegistryObject<Block> COFFEE_MACHINE =
-            registerBlock("coffee_machine", () -> new Block(Block.Properties.of(Material.METAL)
+            registerBlock("coffee_machine", () -> new CoffeeMachineBlock(Block.Properties.of(Material.METAL)
                     .strength(2.0f, 6.0f).sound(SoundType.METAL)));
+
+    // 咖啡机 TileEntity (必须在COFFEE_MACHINE之后)
+    public static final RegistryObject<TileEntityType<CoffeeMachineTileEntity>> COFFEE_MACHINE_TE =
+            TILE_ENTITIES.register("coffee_machine", () -> TileEntityType.Builder.of(
+                CoffeeMachineTileEntity::create, COFFEE_MACHINE.get()).build(null));
+
+    // 咖啡机 ContainerType
+    public static final RegistryObject<ContainerType<CoffeeMachineContainer>> COFFEE_MACHINE_CONTAINER =
+            CONTAINERS.register("coffee_machine", CoffeeMachineContainer::createContainerType);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
