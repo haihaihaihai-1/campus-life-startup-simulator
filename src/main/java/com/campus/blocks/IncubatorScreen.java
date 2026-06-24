@@ -1,0 +1,27 @@
+package com.campus.blocks;
+import com.mojang.blaze3d.matrix.MatrixStack;
+import com.mojang.blaze3d.systems.RenderSystem;
+import net.minecraft.client.gui.screen.inventory.ContainerScreen;
+import net.minecraft.client.gui.widget.button.Button;
+import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.StringTextComponent;
+public class IncubatorScreen extends ContainerScreen<IncubatorContainer> {
+    private static final ResourceLocation TEX = new ResourceLocation("campuslife", "textures/gui/incubator.png");
+    public IncubatorScreen(IncubatorContainer c, PlayerInventory pi, ITextComponent t) { super(c, pi, t); this.imageWidth = 176; this.imageHeight = 186; this.inventoryLabelY = this.imageHeight - 94; }
+    @Override protected void init() {
+        super.init();
+        addButton(new Button(leftPos + 10, topPos + 40, 70, 20, new StringTextComponent("\u5165\u9a7b\u5b75\u5316\u5668"), b -> { if (minecraft != null && minecraft.player != null) minecraft.player.chat("/incubator 1"); }));
+        addButton(new Button(leftPos + 90, topPos + 40, 70, 20, new StringTextComponent("\u67e5\u770b\u5b75\u5316"), b -> { if (minecraft != null && minecraft.player != null) { minecraft.player.chat("/incubator"); onClose(); } }));
+        addButton(new Button(leftPos + 10, topPos + 62, 70, 20, new StringTextComponent("\u67e5\u770b\u8865\u8d34"), b -> { if (minecraft != null && minecraft.player != null) { minecraft.player.chat("/grant"); onClose(); } }));
+        addButton(new Button(leftPos + 90, topPos + 62, 70, 20, new StringTextComponent("\u67e5\u770b\u5bfc\u5e08"), b -> { if (minecraft != null && minecraft.player != null) { minecraft.player.chat("/mentor"); onClose(); } }));
+    }
+    @Override protected void renderBg(MatrixStack ms, float pt, int mx, int my) { RenderSystem.color4f(1,1,1,1); if (minecraft != null) { minecraft.getTextureManager().bind(TEX); blit(ms, leftPos, topPos, 0, 0, imageWidth, imageHeight); } }
+    @Override protected void renderLabels(MatrixStack ms, int mx, int my) {
+        font.draw(ms, "\u00a76\u5b75\u5316\u5668", 6, 6, 0x404040);
+        font.draw(ms, "\u00a7e\u8d44\u91d1: \u00a76" + menu.getMoney(), 6, 20, 0x404040);
+        font.draw(ms, "\u00a7e\u7b49\u7ea7: \u00a7b" + menu.getIncubatorLevel(), 6, 32, 0x404040);
+    }
+    @Override public void render(MatrixStack ms, int mx, int my, float pt) { renderBackground(ms); super.render(ms, mx, my, pt); renderTooltip(ms, mx, my); }
+}

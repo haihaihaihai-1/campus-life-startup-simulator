@@ -27,5 +27,10 @@
   "block.campuslife.market_stall": "Market Stall",
   "block.campuslife.bank_counter": "Bank Counter",
   "block.campuslife.coffee_machine": "Coffee Machine",
-  "itemGroup.campuslife": "Campus Life"
+  "itemGroup.campuslife": "Campus Life",
+  "block.campuslife.invest_center": "Invest Center",
+  "block.campuslife.research_lab": "Research Lab",
+  "block.campuslife.employee_center": "Employee Center",
+  "block.campuslife.incubator": "Incubator",
+  "block.campuslife.stock_terminal": "Stock Terminal"
 }

@@ -108,6 +108,52 @@ public class CampusBlocks {
     public static final RegistryObject<ContainerType<CoffeeMachineContainer>> COFFEE_MACHINE_CONTAINER =
             CONTAINERS.register("coffee_machine", CoffeeMachineContainer::createContainerType);
 
+    // === 第二批GUI方块 ===
+    public static final RegistryObject<Block> INVEST_CENTER =
+            registerBlock("invest_center", () -> new InvestCenterBlock(Block.Properties.of(Material.STONE)
+                    .strength(3.0f, 8.0f).sound(SoundType.STONE)));
+    public static final RegistryObject<TileEntityType<InvestCenterTileEntity>> INVEST_CENTER_TE =
+            TILE_ENTITIES.register("invest_center", () -> TileEntityType.Builder.of(
+                InvestCenterTileEntity::create, INVEST_CENTER.get()).build(null));
+    public static final RegistryObject<ContainerType<InvestCenterContainer>> INVEST_CENTER_CONTAINER =
+            CONTAINERS.register("invest_center", InvestCenterContainer::createContainerType);
+
+    public static final RegistryObject<Block> RESEARCH_LAB =
+            registerBlock("research_lab", () -> new ResearchLabBlock(Block.Properties.of(Material.STONE)
+                    .strength(3.5f, 10.0f).sound(SoundType.STONE)));
+    public static final RegistryObject<TileEntityType<ResearchLabTileEntity>> RESEARCH_LAB_TE =
+            TILE_ENTITIES.register("research_lab", () -> TileEntityType.Builder.of(
+                ResearchLabTileEntity::create, RESEARCH_LAB.get()).build(null));
+    public static final RegistryObject<ContainerType<ResearchLabContainer>> RESEARCH_LAB_CONTAINER =
+            CONTAINERS.register("research_lab", ResearchLabContainer::createContainerType);
+
+    public static final RegistryObject<Block> EMPLOYEE_CENTER =
+            registerBlock("employee_center", () -> new EmployeeCenterBlock(Block.Properties.of(Material.WOOD)
+                    .strength(2.5f, 4.0f).sound(SoundType.WOOD)));
+    public static final RegistryObject<TileEntityType<EmployeeCenterTileEntity>> EMPLOYEE_CENTER_TE =
+            TILE_ENTITIES.register("employee_center", () -> TileEntityType.Builder.of(
+                EmployeeCenterTileEntity::create, EMPLOYEE_CENTER.get()).build(null));
+    public static final RegistryObject<ContainerType<EmployeeCenterContainer>> EMPLOYEE_CENTER_CONTAINER =
+            CONTAINERS.register("employee_center", EmployeeCenterContainer::createContainerType);
+
+    public static final RegistryObject<Block> INCUBATOR =
+            registerBlock("incubator", () -> new IncubatorBlock(Block.Properties.of(Material.WOOD)
+                    .strength(2.0f, 3.5f).sound(SoundType.WOOD)));
+    public static final RegistryObject<TileEntityType<IncubatorTileEntity>> INCUBATOR_TE =
+            TILE_ENTITIES.register("incubator", () -> TileEntityType.Builder.of(
+                IncubatorTileEntity::create, INCUBATOR.get()).build(null));
+    public static final RegistryObject<ContainerType<IncubatorContainer>> INCUBATOR_CONTAINER =
+            CONTAINERS.register("incubator", IncubatorContainer::createContainerType);
+
+    public static final RegistryObject<Block> STOCK_TERMINAL =
+            registerBlock("stock_terminal", () -> new StockTerminalBlock(Block.Properties.of(Material.METAL)
+                    .strength(3.0f, 6.0f).sound(SoundType.METAL)));
+    public static final RegistryObject<TileEntityType<StockTerminalTileEntity>> STOCK_TERMINAL_TE =
+            TILE_ENTITIES.register("stock_terminal", () -> TileEntityType.Builder.of(
+                StockTerminalTileEntity::create, STOCK_TERMINAL.get()).build(null));
+    public static final RegistryObject<ContainerType<StockTerminalContainer>> STOCK_TERMINAL_CONTAINER =
+            CONTAINERS.register("stock_terminal", StockTerminalContainer::createContainerType);
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         ITEMS.register(name, () -> new BlockItem(toReturn.get(),

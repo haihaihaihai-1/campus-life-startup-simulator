@@ -27,5 +27,10 @@
   "block.campuslife.market_stall": "市场摊位",
   "block.campuslife.bank_counter": "银行柜台",
   "block.campuslife.coffee_machine": "咖啡机",
-  "itemGroup.campuslife": "校园生活"
+  "itemGroup.campuslife": "校园生活",
+  "block.campuslife.invest_center": "投资中心",
+  "block.campuslife.research_lab": "研发实验室",
+  "block.campuslife.employee_center": "员工管理中心",
+  "block.campuslife.incubator": "孵化器",
+  "block.campuslife.stock_terminal": "股市终端"
 }
