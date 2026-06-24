@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["MMM", "M M", "MMM"],
+  "key": {
+    "M": {"item": "campuslife:textbook"}
+  },
+  "result": {"item": "campuslife:corporate_univ", "count": 1}
+}

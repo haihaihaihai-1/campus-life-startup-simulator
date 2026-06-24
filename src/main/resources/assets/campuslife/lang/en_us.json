@@ -48,5 +48,10 @@
   "block.campuslife.real_estate_center": "Real Estate Center",
   "block.campuslife.insurance_center": "Insurance Center",
   "block.campuslife.auction_house": "Auction House",
-  "block.campuslife.gov_office": "Government Office"
+  "block.campuslife.gov_office": "Government Office",
+  "block.campuslife.corporate_univ": "Corporate University",
+  "block.campuslife.member_center": "Member Center",
+  "block.campuslife.media_center": "Media Center",
+  "block.campuslife.community_center": "Community Center",
+  "block.campuslife.foundation": "Foundation"
 }

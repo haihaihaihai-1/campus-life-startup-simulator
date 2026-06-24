@@ -48,5 +48,10 @@
   "block.campuslife.real_estate_center": "房地产中心",
   "block.campuslife.insurance_center": "保险中心",
   "block.campuslife.auction_house": "拍卖行",
-  "block.campuslife.gov_office": "政府办事处"
+  "block.campuslife.gov_office": "政府办事处",
+  "block.campuslife.corporate_univ": "企业大学",
+  "block.campuslife.member_center": "会员中心",
+  "block.campuslife.media_center": "传媒中心",
+  "block.campuslife.community_center": "社区中心",
+  "block.campuslife.foundation": "基金会"
 }

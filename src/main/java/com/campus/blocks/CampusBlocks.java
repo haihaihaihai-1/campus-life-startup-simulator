@@ -246,6 +246,27 @@ public class CampusBlocks {
     public static final RegistryObject<TileEntityType<GovOfficeTileEntity>> GOV_OFFICE_TE = TILE_ENTITIES.register("gov_office", () -> TileEntityType.Builder.of(GovOfficeTileEntity::create, GOV_OFFICE.get()).build(null));
     public static final RegistryObject<ContainerType<GovOfficeContainer>> GOV_OFFICE_CONTAINER = CONTAINERS.register("gov_office", GovOfficeContainer::createContainerType);
 
+    // === 第六批GUI方块 ===
+    public static final RegistryObject<Block> CORPORATE_UNIV = registerBlock("corporate_univ", () -> new CorporateUnivBlock(Block.Properties.of(Material.WOOD).strength(2.5f, 4.0f).sound(SoundType.WOOD)));
+    public static final RegistryObject<TileEntityType<CorporateUnivTileEntity>> CORPORATE_UNIV_TE = TILE_ENTITIES.register("corporate_univ", () -> TileEntityType.Builder.of(CorporateUnivTileEntity::create, CORPORATE_UNIV.get()).build(null));
+    public static final RegistryObject<ContainerType<CorporateUnivContainer>> CORPORATE_UNIV_CONTAINER = CONTAINERS.register("corporate_univ", CorporateUnivContainer::createContainerType);
+
+    public static final RegistryObject<Block> MEMBER_CENTER = registerBlock("member_center", () -> new MemberCenterBlock(Block.Properties.of(Material.WOOD).strength(2.5f, 4.0f).sound(SoundType.WOOD)));
+    public static final RegistryObject<TileEntityType<MemberCenterTileEntity>> MEMBER_CENTER_TE = TILE_ENTITIES.register("member_center", () -> TileEntityType.Builder.of(MemberCenterTileEntity::create, MEMBER_CENTER.get()).build(null));
+    public static final RegistryObject<ContainerType<MemberCenterContainer>> MEMBER_CENTER_CONTAINER = CONTAINERS.register("member_center", MemberCenterContainer::createContainerType);
+
+    public static final RegistryObject<Block> MEDIA_CENTER = registerBlock("media_center", () -> new MediaCenterBlock(Block.Properties.of(Material.WOOD).strength(2.5f, 4.0f).sound(SoundType.WOOD)));
+    public static final RegistryObject<TileEntityType<MediaCenterTileEntity>> MEDIA_CENTER_TE = TILE_ENTITIES.register("media_center", () -> TileEntityType.Builder.of(MediaCenterTileEntity::create, MEDIA_CENTER.get()).build(null));
+    public static final RegistryObject<ContainerType<MediaCenterContainer>> MEDIA_CENTER_CONTAINER = CONTAINERS.register("media_center", MediaCenterContainer::createContainerType);
+
+    public static final RegistryObject<Block> COMMUNITY_CENTER = registerBlock("community_center", () -> new CommunityCenterBlock(Block.Properties.of(Material.WOOD).strength(2.5f, 4.0f).sound(SoundType.WOOD)));
+    public static final RegistryObject<TileEntityType<CommunityCenterTileEntity>> COMMUNITY_CENTER_TE = TILE_ENTITIES.register("community_center", () -> TileEntityType.Builder.of(CommunityCenterTileEntity::create, COMMUNITY_CENTER.get()).build(null));
+    public static final RegistryObject<ContainerType<CommunityCenterContainer>> COMMUNITY_CENTER_CONTAINER = CONTAINERS.register("community_center", CommunityCenterContainer::createContainerType);
+
+    public static final RegistryObject<Block> FOUNDATION = registerBlock("foundation", () -> new FoundationBlock(Block.Properties.of(Material.STONE).strength(3.5f, 10.0f).sound(SoundType.STONE)));
+    public static final RegistryObject<TileEntityType<FoundationTileEntity>> FOUNDATION_TE = TILE_ENTITIES.register("foundation", () -> TileEntityType.Builder.of(FoundationTileEntity::create, FOUNDATION.get()).build(null));
+    public static final RegistryObject<ContainerType<FoundationContainer>> FOUNDATION_CONTAINER = CONTAINERS.register("foundation", FoundationContainer::createContainerType);
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         ITEMS.register(name, () -> new BlockItem(toReturn.get(),

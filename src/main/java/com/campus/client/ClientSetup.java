@@ -26,6 +26,11 @@ import com.campus.blocks.RealEstateCenterScreen;
 import com.campus.blocks.InsuranceCenterScreen;
 import com.campus.blocks.AuctionHouseScreen;
 import com.campus.blocks.GovOfficeScreen;
+import com.campus.blocks.CorporateUnivScreen;
+import com.campus.blocks.MemberCenterScreen;
+import com.campus.blocks.MediaCenterScreen;
+import com.campus.blocks.CommunityCenterScreen;
+import com.campus.blocks.FoundationScreen;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
@@ -66,6 +71,12 @@ public class ClientSetup {
             ScreenManager.register(CampusBlocks.INSURANCE_CENTER_CONTAINER.get(), InsuranceCenterScreen::new);
             ScreenManager.register(CampusBlocks.AUCTION_HOUSE_CONTAINER.get(), AuctionHouseScreen::new);
             ScreenManager.register(CampusBlocks.GOV_OFFICE_CONTAINER.get(), GovOfficeScreen::new);
+            // 第六批GUI
+            ScreenManager.register(CampusBlocks.CORPORATE_UNIV_CONTAINER.get(), CorporateUnivScreen::new);
+            ScreenManager.register(CampusBlocks.MEMBER_CENTER_CONTAINER.get(), MemberCenterScreen::new);
+            ScreenManager.register(CampusBlocks.MEDIA_CENTER_CONTAINER.get(), MediaCenterScreen::new);
+            ScreenManager.register(CampusBlocks.COMMUNITY_CENTER_CONTAINER.get(), CommunityCenterScreen::new);
+            ScreenManager.register(CampusBlocks.FOUNDATION_CONTAINER.get(), FoundationScreen::new);
         });
     }
 }
