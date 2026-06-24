@@ -43,5 +43,10 @@
   "block.campuslife.digital_center": "数字化中心",
   "block.campuslife.brand_workshop": "品牌工坊",
   "block.campuslife.data_center": "数据中心",
-  "block.campuslife.future_factory": "未来工厂"
+  "block.campuslife.future_factory": "未来工厂",
+  "block.campuslife.ip_trade_center": "IP交易中心",
+  "block.campuslife.real_estate_center": "房地产中心",
+  "block.campuslife.insurance_center": "保险中心",
+  "block.campuslife.auction_house": "拍卖行",
+  "block.campuslife.gov_office": "政府办事处"
 }

@@ -43,5 +43,10 @@
   "block.campuslife.digital_center": "Digital Center",
   "block.campuslife.brand_workshop": "Brand Workshop",
   "block.campuslife.data_center": "Data Center",
-  "block.campuslife.future_factory": "Future Factory"
+  "block.campuslife.future_factory": "Future Factory",
+  "block.campuslife.ip_trade_center": "IP Trade Center",
+  "block.campuslife.real_estate_center": "Real Estate Center",
+  "block.campuslife.insurance_center": "Insurance Center",
+  "block.campuslife.auction_house": "Auction House",
+  "block.campuslife.gov_office": "Government Office"
 }

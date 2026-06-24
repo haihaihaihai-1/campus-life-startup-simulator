@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["MMM", "M M", "MMM"],
+  "key": {
+    "M": {"item": "campuslife:coffee_cup"}
+  },
+  "result": {"item": "campuslife:coffee_machine", "count": 1}
+}

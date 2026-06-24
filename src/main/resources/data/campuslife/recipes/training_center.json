@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["MMM", "M M", "MMM"],
+  "key": {
+    "M": {"item": "campuslife:pencil"}
+  },
+  "result": {"item": "campuslife:training_center", "count": 1}
+}

@@ -225,10 +225,31 @@ public class CampusBlocks {
     public static final RegistryObject<TileEntityType<FutureFactoryTileEntity>> FUTURE_FACTORY_TE = TILE_ENTITIES.register("future_factory", () -> TileEntityType.Builder.of(FutureFactoryTileEntity::create, FUTURE_FACTORY.get()).build(null));
     public static final RegistryObject<ContainerType<FutureFactoryContainer>> FUTURE_FACTORY_CONTAINER = CONTAINERS.register("future_factory", FutureFactoryContainer::createContainerType);
 
+    // === 第五批GUI方块 ===
+    public static final RegistryObject<Block> IP_TRADE_CENTER = registerBlock("ip_trade_center", () -> new IPTradeCenterBlock(Block.Properties.of(Material.STONE).strength(3.0f, 8.0f).sound(SoundType.STONE)));
+    public static final RegistryObject<TileEntityType<IPTradeCenterTileEntity>> IP_TRADE_CENTER_TE = TILE_ENTITIES.register("ip_trade_center", () -> TileEntityType.Builder.of(IPTradeCenterTileEntity::create, IP_TRADE_CENTER.get()).build(null));
+    public static final RegistryObject<ContainerType<IPTradeCenterContainer>> IP_TRADE_CENTER_CONTAINER = CONTAINERS.register("ip_trade_center", IPTradeCenterContainer::createContainerType);
+
+    public static final RegistryObject<Block> REAL_ESTATE_CENTER = registerBlock("real_estate_center", () -> new RealEstateCenterBlock(Block.Properties.of(Material.STONE).strength(3.5f, 10.0f).sound(SoundType.STONE)));
+    public static final RegistryObject<TileEntityType<RealEstateCenterTileEntity>> REAL_ESTATE_CENTER_TE = TILE_ENTITIES.register("real_estate_center", () -> TileEntityType.Builder.of(RealEstateCenterTileEntity::create, REAL_ESTATE_CENTER.get()).build(null));
+    public static final RegistryObject<ContainerType<RealEstateCenterContainer>> REAL_ESTATE_CENTER_CONTAINER = CONTAINERS.register("real_estate_center", RealEstateCenterContainer::createContainerType);
+
+    public static final RegistryObject<Block> INSURANCE_CENTER = registerBlock("insurance_center", () -> new InsuranceCenterBlock(Block.Properties.of(Material.WOOD).strength(2.5f, 4.0f).sound(SoundType.WOOD)));
+    public static final RegistryObject<TileEntityType<InsuranceCenterTileEntity>> INSURANCE_CENTER_TE = TILE_ENTITIES.register("insurance_center", () -> TileEntityType.Builder.of(InsuranceCenterTileEntity::create, INSURANCE_CENTER.get()).build(null));
+    public static final RegistryObject<ContainerType<InsuranceCenterContainer>> INSURANCE_CENTER_CONTAINER = CONTAINERS.register("insurance_center", InsuranceCenterContainer::createContainerType);
+
+    public static final RegistryObject<Block> AUCTION_HOUSE = registerBlock("auction_house", () -> new AuctionHouseBlock(Block.Properties.of(Material.WOOD).strength(2.5f, 4.0f).sound(SoundType.WOOD)));
+    public static final RegistryObject<TileEntityType<AuctionHouseTileEntity>> AUCTION_HOUSE_TE = TILE_ENTITIES.register("auction_house", () -> TileEntityType.Builder.of(AuctionHouseTileEntity::create, AUCTION_HOUSE.get()).build(null));
+    public static final RegistryObject<ContainerType<AuctionHouseContainer>> AUCTION_HOUSE_CONTAINER = CONTAINERS.register("auction_house", AuctionHouseContainer::createContainerType);
+
+    public static final RegistryObject<Block> GOV_OFFICE = registerBlock("gov_office", () -> new GovOfficeBlock(Block.Properties.of(Material.STONE).strength(3.5f, 10.0f).sound(SoundType.STONE)));
+    public static final RegistryObject<TileEntityType<GovOfficeTileEntity>> GOV_OFFICE_TE = TILE_ENTITIES.register("gov_office", () -> TileEntityType.Builder.of(GovOfficeTileEntity::create, GOV_OFFICE.get()).build(null));
+    public static final RegistryObject<ContainerType<GovOfficeContainer>> GOV_OFFICE_CONTAINER = CONTAINERS.register("gov_office", GovOfficeContainer::createContainerType);
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         ITEMS.register(name, () -> new BlockItem(toReturn.get(),
-                new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
+                new Item.Properties().tab(com.campus.items.CampusItemGroup.INSTANCE)));
         return toReturn;
     }
 }

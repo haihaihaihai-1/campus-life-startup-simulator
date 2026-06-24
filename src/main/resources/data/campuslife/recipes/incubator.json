@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["MMM", "M M", "MMM"],
+  "key": {
+    "M": {"item": "campuslife:startup_kit"}
+  },
+  "result": {"item": "campuslife:incubator", "count": 1}
+}
