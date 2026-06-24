@@ -15,6 +15,12 @@ import com.campus.blocks.TaxOfficeScreen;
 import com.campus.blocks.AchievementHallScreen;
 import com.campus.blocks.CompetitionArenaScreen;
 import com.campus.blocks.AllianceHQScreen;
+import com.campus.blocks.ESGCenterScreen;
+import com.campus.blocks.CarbonExchangeScreen;
+import com.campus.blocks.DigitalCenterScreen;
+import com.campus.blocks.BrandWorkshopScreen;
+import com.campus.blocks.DataCenterScreen;
+import com.campus.blocks.FutureFactoryScreen;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
@@ -42,6 +48,13 @@ public class ClientSetup {
             ScreenManager.register(CampusBlocks.ACHIEVEMENT_HALL_CONTAINER.get(), AchievementHallScreen::new);
             ScreenManager.register(CampusBlocks.COMPETITION_ARENA_CONTAINER.get(), CompetitionArenaScreen::new);
             ScreenManager.register(CampusBlocks.ALLIANCE_HQ_CONTAINER.get(), AllianceHQScreen::new);
+            // 第四批GUI
+            ScreenManager.register(CampusBlocks.ESG_CENTER_CONTAINER.get(), ESGCenterScreen::new);
+            ScreenManager.register(CampusBlocks.CARBON_EXCHANGE_CONTAINER.get(), CarbonExchangeScreen::new);
+            ScreenManager.register(CampusBlocks.DIGITAL_CENTER_CONTAINER.get(), DigitalCenterScreen::new);
+            ScreenManager.register(CampusBlocks.BRAND_WORKSHOP_CONTAINER.get(), BrandWorkshopScreen::new);
+            ScreenManager.register(CampusBlocks.DATA_CENTER_CONTAINER.get(), DataCenterScreen::new);
+            ScreenManager.register(CampusBlocks.FUTURE_FACTORY_CONTAINER.get(), FutureFactoryScreen::new);
         });
     }
 }

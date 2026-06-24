@@ -200,6 +200,31 @@ public class CampusBlocks {
     public static final RegistryObject<ContainerType<AllianceHQContainer>> ALLIANCE_HQ_CONTAINER =
             CONTAINERS.register("alliance_hq", AllianceHQContainer::createContainerType);
 
+    // === 第四批GUI方块 ===
+    public static final RegistryObject<Block> ESG_CENTER = registerBlock("esg_center", () -> new ESGCenterBlock(Block.Properties.of(Material.STONE).strength(3.0f, 8.0f).sound(SoundType.STONE)));
+    public static final RegistryObject<TileEntityType<ESGCenterTileEntity>> ESG_CENTER_TE = TILE_ENTITIES.register("esg_center", () -> TileEntityType.Builder.of(ESGCenterTileEntity::create, ESG_CENTER.get()).build(null));
+    public static final RegistryObject<ContainerType<ESGCenterContainer>> ESG_CENTER_CONTAINER = CONTAINERS.register("esg_center", ESGCenterContainer::createContainerType);
+
+    public static final RegistryObject<Block> CARBON_EXCHANGE = registerBlock("carbon_exchange", () -> new CarbonExchangeBlock(Block.Properties.of(Material.STONE).strength(3.5f, 10.0f).sound(SoundType.STONE)));
+    public static final RegistryObject<TileEntityType<CarbonExchangeTileEntity>> CARBON_EXCHANGE_TE = TILE_ENTITIES.register("carbon_exchange", () -> TileEntityType.Builder.of(CarbonExchangeTileEntity::create, CARBON_EXCHANGE.get()).build(null));
+    public static final RegistryObject<ContainerType<CarbonExchangeContainer>> CARBON_EXCHANGE_CONTAINER = CONTAINERS.register("carbon_exchange", CarbonExchangeContainer::createContainerType);
+
+    public static final RegistryObject<Block> DIGITAL_CENTER = registerBlock("digital_center", () -> new DigitalCenterBlock(Block.Properties.of(Material.METAL).strength(3.0f, 6.0f).sound(SoundType.METAL)));
+    public static final RegistryObject<TileEntityType<DigitalCenterTileEntity>> DIGITAL_CENTER_TE = TILE_ENTITIES.register("digital_center", () -> TileEntityType.Builder.of(DigitalCenterTileEntity::create, DIGITAL_CENTER.get()).build(null));
+    public static final RegistryObject<ContainerType<DigitalCenterContainer>> DIGITAL_CENTER_CONTAINER = CONTAINERS.register("digital_center", DigitalCenterContainer::createContainerType);
+
+    public static final RegistryObject<Block> BRAND_WORKSHOP = registerBlock("brand_workshop", () -> new BrandWorkshopBlock(Block.Properties.of(Material.WOOD).strength(2.5f, 4.0f).sound(SoundType.WOOD)));
+    public static final RegistryObject<TileEntityType<BrandWorkshopTileEntity>> BRAND_WORKSHOP_TE = TILE_ENTITIES.register("brand_workshop", () -> TileEntityType.Builder.of(BrandWorkshopTileEntity::create, BRAND_WORKSHOP.get()).build(null));
+    public static final RegistryObject<ContainerType<BrandWorkshopContainer>> BRAND_WORKSHOP_CONTAINER = CONTAINERS.register("brand_workshop", BrandWorkshopContainer::createContainerType);
+
+    public static final RegistryObject<Block> DATA_CENTER = registerBlock("data_center", () -> new DataCenterBlock(Block.Properties.of(Material.METAL).strength(3.0f, 6.0f).sound(SoundType.METAL)));
+    public static final RegistryObject<TileEntityType<DataCenterTileEntity>> DATA_CENTER_TE = TILE_ENTITIES.register("data_center", () -> TileEntityType.Builder.of(DataCenterTileEntity::create, DATA_CENTER.get()).build(null));
+    public static final RegistryObject<ContainerType<DataCenterContainer>> DATA_CENTER_CONTAINER = CONTAINERS.register("data_center", DataCenterContainer::createContainerType);
+
+    public static final RegistryObject<Block> FUTURE_FACTORY = registerBlock("future_factory", () -> new FutureFactoryBlock(Block.Properties.of(Material.METAL).strength(3.5f, 8.0f).sound(SoundType.METAL)));
+    public static final RegistryObject<TileEntityType<FutureFactoryTileEntity>> FUTURE_FACTORY_TE = TILE_ENTITIES.register("future_factory", () -> TileEntityType.Builder.of(FutureFactoryTileEntity::create, FUTURE_FACTORY.get()).build(null));
+    public static final RegistryObject<ContainerType<FutureFactoryContainer>> FUTURE_FACTORY_CONTAINER = CONTAINERS.register("future_factory", FutureFactoryContainer::createContainerType);
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         ITEMS.register(name, () -> new BlockItem(toReturn.get(),

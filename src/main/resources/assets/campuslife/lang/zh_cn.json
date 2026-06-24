@@ -37,5 +37,11 @@
   "block.campuslife.tax_office": "税务局",
   "block.campuslife.achievement_hall": "成就大厅",
   "block.campuslife.competition_arena": "竞技场",
-  "block.campuslife.alliance_hq": "联盟总部"
+  "block.campuslife.alliance_hq": "联盟总部",
+  "block.campuslife.esg_center": "ESG中心",
+  "block.campuslife.carbon_exchange": "碳交易所",
+  "block.campuslife.digital_center": "数字化中心",
+  "block.campuslife.brand_workshop": "品牌工坊",
+  "block.campuslife.data_center": "数据中心",
+  "block.campuslife.future_factory": "未来工厂"
 }

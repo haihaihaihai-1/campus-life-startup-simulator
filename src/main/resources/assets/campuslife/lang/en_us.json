@@ -37,5 +37,11 @@
   "block.campuslife.tax_office": "Tax Office",
   "block.campuslife.achievement_hall": "Achievement Hall",
   "block.campuslife.competition_arena": "Competition Arena",
-  "block.campuslife.alliance_hq": "Alliance HQ"
+  "block.campuslife.alliance_hq": "Alliance HQ",
+  "block.campuslife.esg_center": "ESG Center",
+  "block.campuslife.carbon_exchange": "Carbon Exchange",
+  "block.campuslife.digital_center": "Digital Center",
+  "block.campuslife.brand_workshop": "Brand Workshop",
+  "block.campuslife.data_center": "Data Center",
+  "block.campuslife.future_factory": "Future Factory"
 }
