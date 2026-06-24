@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["MMM", "M M", "MMM"],
+  "key": {
+    "M": {"item": "campuslife:coin"}
+  },
+  "result": {"item": "campuslife:real_estate_center", "count": 1}
+}

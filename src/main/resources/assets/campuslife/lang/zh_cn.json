@@ -53,5 +53,10 @@
   "block.campuslife.member_center": "会员中心",
   "block.campuslife.media_center": "传媒中心",
   "block.campuslife.community_center": "社区中心",
-  "block.campuslife.foundation": "基金会"
+  "block.campuslife.foundation": "基金会",
+  "block.campuslife.international_center": "国际化中心",
+  "block.campuslife.logistics_center": "物流中心",
+  "block.campuslife.quality_center": "质检中心",
+  "block.campuslife.supply_chain": "供应链管理",
+  "block.campuslife.retail_empire": "零售帝国"
 }

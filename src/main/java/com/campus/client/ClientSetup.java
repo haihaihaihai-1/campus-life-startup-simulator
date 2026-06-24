@@ -31,6 +31,11 @@ import com.campus.blocks.MemberCenterScreen;
 import com.campus.blocks.MediaCenterScreen;
 import com.campus.blocks.CommunityCenterScreen;
 import com.campus.blocks.FoundationScreen;
+import com.campus.blocks.InternationalCenterScreen;
+import com.campus.blocks.LogisticsCenterScreen;
+import com.campus.blocks.QualityCenterScreen;
+import com.campus.blocks.SupplyChainScreen;
+import com.campus.blocks.RetailEmpireScreen;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
@@ -77,6 +82,12 @@ public class ClientSetup {
             ScreenManager.register(CampusBlocks.MEDIA_CENTER_CONTAINER.get(), MediaCenterScreen::new);
             ScreenManager.register(CampusBlocks.COMMUNITY_CENTER_CONTAINER.get(), CommunityCenterScreen::new);
             ScreenManager.register(CampusBlocks.FOUNDATION_CONTAINER.get(), FoundationScreen::new);
+        // 第七批GUI
+        ScreenManager.register(CampusBlocks.INTERNATIONAL_CENTER_CONTAINER.get(), InternationalCenterScreen::new);
+        ScreenManager.register(CampusBlocks.LOGISTICS_CENTER_CONTAINER.get(), LogisticsCenterScreen::new);
+        ScreenManager.register(CampusBlocks.QUALITY_CENTER_CONTAINER.get(), QualityCenterScreen::new);
+        ScreenManager.register(CampusBlocks.SUPPLY_CHAIN_CONTAINER.get(), SupplyChainScreen::new);
+        ScreenManager.register(CampusBlocks.RETAIL_EMPIRE_CONTAINER.get(), RetailEmpireScreen::new);
         });
     }
 }

@@ -267,6 +267,27 @@ public class CampusBlocks {
     public static final RegistryObject<TileEntityType<FoundationTileEntity>> FOUNDATION_TE = TILE_ENTITIES.register("foundation", () -> TileEntityType.Builder.of(FoundationTileEntity::create, FOUNDATION.get()).build(null));
     public static final RegistryObject<ContainerType<FoundationContainer>> FOUNDATION_CONTAINER = CONTAINERS.register("foundation", FoundationContainer::createContainerType);
 
+    // === 第七批GUI方块 ===
+    public static final RegistryObject<Block> INTERNATIONAL_CENTER = registerBlock("international_center", () -> new InternationalCenterBlock(Block.Properties.of(Material.STONE).strength(3.0f, 8.0f).sound(SoundType.STONE)));
+    public static final RegistryObject<TileEntityType<InternationalCenterTileEntity>> INTERNATIONAL_CENTER_TE = TILE_ENTITIES.register("international_center", () -> TileEntityType.Builder.of(InternationalCenterTileEntity::create, INTERNATIONAL_CENTER.get()).build(null));
+    public static final RegistryObject<ContainerType<InternationalCenterContainer>> INTERNATIONAL_CENTER_CONTAINER = CONTAINERS.register("international_center", InternationalCenterContainer::createContainerType);
+
+    public static final RegistryObject<Block> LOGISTICS_CENTER = registerBlock("logistics_center", () -> new LogisticsCenterBlock(Block.Properties.of(Material.METAL).strength(3.0f, 6.0f).sound(SoundType.METAL)));
+    public static final RegistryObject<TileEntityType<LogisticsCenterTileEntity>> LOGISTICS_CENTER_TE = TILE_ENTITIES.register("logistics_center", () -> TileEntityType.Builder.of(LogisticsCenterTileEntity::create, LOGISTICS_CENTER.get()).build(null));
+    public static final RegistryObject<ContainerType<LogisticsCenterContainer>> LOGISTICS_CENTER_CONTAINER = CONTAINERS.register("logistics_center", LogisticsCenterContainer::createContainerType);
+
+    public static final RegistryObject<Block> QUALITY_CENTER = registerBlock("quality_center", () -> new QualityCenterBlock(Block.Properties.of(Material.STONE).strength(3.5f, 10.0f).sound(SoundType.STONE)));
+    public static final RegistryObject<TileEntityType<QualityCenterTileEntity>> QUALITY_CENTER_TE = TILE_ENTITIES.register("quality_center", () -> TileEntityType.Builder.of(QualityCenterTileEntity::create, QUALITY_CENTER.get()).build(null));
+    public static final RegistryObject<ContainerType<QualityCenterContainer>> QUALITY_CENTER_CONTAINER = CONTAINERS.register("quality_center", QualityCenterContainer::createContainerType);
+
+    public static final RegistryObject<Block> SUPPLY_CHAIN = registerBlock("supply_chain", () -> new SupplyChainBlock(Block.Properties.of(Material.METAL).strength(3.0f, 8.0f).sound(SoundType.METAL)));
+    public static final RegistryObject<TileEntityType<SupplyChainTileEntity>> SUPPLY_CHAIN_TE = TILE_ENTITIES.register("supply_chain", () -> TileEntityType.Builder.of(SupplyChainTileEntity::create, SUPPLY_CHAIN.get()).build(null));
+    public static final RegistryObject<ContainerType<SupplyChainContainer>> SUPPLY_CHAIN_CONTAINER = CONTAINERS.register("supply_chain", SupplyChainContainer::createContainerType);
+
+    public static final RegistryObject<Block> RETAIL_EMPIRE = registerBlock("retail_empire", () -> new RetailEmpireBlock(Block.Properties.of(Material.WOOD).strength(2.5f, 4.0f).sound(SoundType.WOOD)));
+    public static final RegistryObject<TileEntityType<RetailEmpireTileEntity>> RETAIL_EMPIRE_TE = TILE_ENTITIES.register("retail_empire", () -> TileEntityType.Builder.of(RetailEmpireTileEntity::create, RETAIL_EMPIRE.get()).build(null));
+    public static final RegistryObject<ContainerType<RetailEmpireContainer>> RETAIL_EMPIRE_CONTAINER = CONTAINERS.register("retail_empire", RetailEmpireContainer::createContainerType);
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         ITEMS.register(name, () -> new BlockItem(toReturn.get(),

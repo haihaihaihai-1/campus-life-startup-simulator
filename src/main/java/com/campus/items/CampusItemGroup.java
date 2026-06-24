@@ -38,6 +38,27 @@ public class CampusItemGroup extends ItemGroup {
         items.add(new ItemStack(CampusBlocks.ACHIEVEMENT_HALL.get()));
         items.add(new ItemStack(CampusBlocks.COMPETITION_ARENA.get()));
         items.add(new ItemStack(CampusBlocks.ALLIANCE_HQ.get()));
+        items.add(new ItemStack(CampusBlocks.ESG_CENTER.get()));
+        items.add(new ItemStack(CampusBlocks.CARBON_EXCHANGE.get()));
+        items.add(new ItemStack(CampusBlocks.DIGITAL_CENTER.get()));
+        items.add(new ItemStack(CampusBlocks.BRAND_WORKSHOP.get()));
+        items.add(new ItemStack(CampusBlocks.DATA_CENTER.get()));
+        items.add(new ItemStack(CampusBlocks.FUTURE_FACTORY.get()));
+        items.add(new ItemStack(CampusBlocks.IP_TRADE_CENTER.get()));
+        items.add(new ItemStack(CampusBlocks.REAL_ESTATE_CENTER.get()));
+        items.add(new ItemStack(CampusBlocks.INSURANCE_CENTER.get()));
+        items.add(new ItemStack(CampusBlocks.AUCTION_HOUSE.get()));
+        items.add(new ItemStack(CampusBlocks.GOV_OFFICE.get()));
+        items.add(new ItemStack(CampusBlocks.CORPORATE_UNIV.get()));
+        items.add(new ItemStack(CampusBlocks.MEMBER_CENTER.get()));
+        items.add(new ItemStack(CampusBlocks.MEDIA_CENTER.get()));
+        items.add(new ItemStack(CampusBlocks.COMMUNITY_CENTER.get()));
+        items.add(new ItemStack(CampusBlocks.FOUNDATION.get()));
+        items.add(new ItemStack(CampusBlocks.INTERNATIONAL_CENTER.get()));
+        items.add(new ItemStack(CampusBlocks.LOGISTICS_CENTER.get()));
+        items.add(new ItemStack(CampusBlocks.QUALITY_CENTER.get()));
+        items.add(new ItemStack(CampusBlocks.SUPPLY_CHAIN.get()));
+        items.add(new ItemStack(CampusBlocks.RETAIL_EMPIRE.get()));
         // 添加所有物品
         CampusItems.ITEMS.getEntries().forEach(entry -> {
             if (!items.contains(new ItemStack(entry.get()))) {

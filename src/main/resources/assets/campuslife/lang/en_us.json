@@ -53,5 +53,10 @@
   "block.campuslife.member_center": "Member Center",
   "block.campuslife.media_center": "Media Center",
   "block.campuslife.community_center": "Community Center",
-  "block.campuslife.foundation": "Foundation"
+  "block.campuslife.foundation": "Foundation",
+  "block.campuslife.international_center": "International Center",
+  "block.campuslife.logistics_center": "Logistics Center",
+  "block.campuslife.quality_center": "Quality Center",
+  "block.campuslife.supply_chain": "Supply Chain",
+  "block.campuslife.retail_empire": "Retail Empire"
 }
