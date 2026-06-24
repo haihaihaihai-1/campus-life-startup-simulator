@@ -32,5 +32,10 @@
   "block.campuslife.research_lab": "研发实验室",
   "block.campuslife.employee_center": "员工管理中心",
   "block.campuslife.incubator": "孵化器",
-  "block.campuslife.stock_terminal": "股市终端"
+  "block.campuslife.stock_terminal": "股市终端",
+  "block.campuslife.training_center": "培训中心",
+  "block.campuslife.tax_office": "税务局",
+  "block.campuslife.achievement_hall": "成就大厅",
+  "block.campuslife.competition_arena": "竞技场",
+  "block.campuslife.alliance_hq": "联盟总部"
 }

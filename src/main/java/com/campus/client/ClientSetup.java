@@ -10,6 +10,11 @@ import com.campus.blocks.ResearchLabScreen;
 import com.campus.blocks.EmployeeCenterScreen;
 import com.campus.blocks.IncubatorScreen;
 import com.campus.blocks.StockTerminalScreen;
+import com.campus.blocks.TrainingCenterScreen;
+import com.campus.blocks.TaxOfficeScreen;
+import com.campus.blocks.AchievementHallScreen;
+import com.campus.blocks.CompetitionArenaScreen;
+import com.campus.blocks.AllianceHQScreen;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
@@ -31,6 +36,12 @@ public class ClientSetup {
             ScreenManager.register(CampusBlocks.EMPLOYEE_CENTER_CONTAINER.get(), EmployeeCenterScreen::new);
             ScreenManager.register(CampusBlocks.INCUBATOR_CONTAINER.get(), IncubatorScreen::new);
             ScreenManager.register(CampusBlocks.STOCK_TERMINAL_CONTAINER.get(), StockTerminalScreen::new);
+            // 第三批GUI
+            ScreenManager.register(CampusBlocks.TRAINING_CENTER_CONTAINER.get(), TrainingCenterScreen::new);
+            ScreenManager.register(CampusBlocks.TAX_OFFICE_CONTAINER.get(), TaxOfficeScreen::new);
+            ScreenManager.register(CampusBlocks.ACHIEVEMENT_HALL_CONTAINER.get(), AchievementHallScreen::new);
+            ScreenManager.register(CampusBlocks.COMPETITION_ARENA_CONTAINER.get(), CompetitionArenaScreen::new);
+            ScreenManager.register(CampusBlocks.ALLIANCE_HQ_CONTAINER.get(), AllianceHQScreen::new);
         });
     }
 }

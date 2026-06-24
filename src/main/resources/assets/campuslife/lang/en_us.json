@@ -32,5 +32,10 @@
   "block.campuslife.research_lab": "Research Lab",
   "block.campuslife.employee_center": "Employee Center",
   "block.campuslife.incubator": "Incubator",
-  "block.campuslife.stock_terminal": "Stock Terminal"
+  "block.campuslife.stock_terminal": "Stock Terminal",
+  "block.campuslife.training_center": "Training Center",
+  "block.campuslife.tax_office": "Tax Office",
+  "block.campuslife.achievement_hall": "Achievement Hall",
+  "block.campuslife.competition_arena": "Competition Arena",
+  "block.campuslife.alliance_hq": "Alliance HQ"
 }

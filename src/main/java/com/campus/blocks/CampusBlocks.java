@@ -154,6 +154,52 @@ public class CampusBlocks {
     public static final RegistryObject<ContainerType<StockTerminalContainer>> STOCK_TERMINAL_CONTAINER =
             CONTAINERS.register("stock_terminal", StockTerminalContainer::createContainerType);
 
+    // === 第三批GUI方块 ===
+    public static final RegistryObject<Block> TRAINING_CENTER =
+            registerBlock("training_center", () -> new TrainingCenterBlock(Block.Properties.of(Material.STONE)
+                    .strength(3.0f, 8.0f).sound(SoundType.STONE)));
+    public static final RegistryObject<TileEntityType<TrainingCenterTileEntity>> TRAINING_CENTER_TE =
+            TILE_ENTITIES.register("training_center", () -> TileEntityType.Builder.of(
+                TrainingCenterTileEntity::create, TRAINING_CENTER.get()).build(null));
+    public static final RegistryObject<ContainerType<TrainingCenterContainer>> TRAINING_CENTER_CONTAINER =
+            CONTAINERS.register("training_center", TrainingCenterContainer::createContainerType);
+
+    public static final RegistryObject<Block> TAX_OFFICE =
+            registerBlock("tax_office", () -> new TaxOfficeBlock(Block.Properties.of(Material.STONE)
+                    .strength(3.5f, 10.0f).sound(SoundType.STONE)));
+    public static final RegistryObject<TileEntityType<TaxOfficeTileEntity>> TAX_OFFICE_TE =
+            TILE_ENTITIES.register("tax_office", () -> TileEntityType.Builder.of(
+                TaxOfficeTileEntity::create, TAX_OFFICE.get()).build(null));
+    public static final RegistryObject<ContainerType<TaxOfficeContainer>> TAX_OFFICE_CONTAINER =
+            CONTAINERS.register("tax_office", TaxOfficeContainer::createContainerType);
+
+    public static final RegistryObject<Block> ACHIEVEMENT_HALL =
+            registerBlock("achievement_hall", () -> new AchievementHallBlock(Block.Properties.of(Material.WOOD)
+                    .strength(2.5f, 4.0f).sound(SoundType.WOOD)));
+    public static final RegistryObject<TileEntityType<AchievementHallTileEntity>> ACHIEVEMENT_HALL_TE =
+            TILE_ENTITIES.register("achievement_hall", () -> TileEntityType.Builder.of(
+                AchievementHallTileEntity::create, ACHIEVEMENT_HALL.get()).build(null));
+    public static final RegistryObject<ContainerType<AchievementHallContainer>> ACHIEVEMENT_HALL_CONTAINER =
+            CONTAINERS.register("achievement_hall", AchievementHallContainer::createContainerType);
+
+    public static final RegistryObject<Block> COMPETITION_ARENA =
+            registerBlock("competition_arena", () -> new CompetitionArenaBlock(Block.Properties.of(Material.STONE)
+                    .strength(3.5f, 10.0f).sound(SoundType.STONE)));
+    public static final RegistryObject<TileEntityType<CompetitionArenaTileEntity>> COMPETITION_ARENA_TE =
+            TILE_ENTITIES.register("competition_arena", () -> TileEntityType.Builder.of(
+                CompetitionArenaTileEntity::create, COMPETITION_ARENA.get()).build(null));
+    public static final RegistryObject<ContainerType<CompetitionArenaContainer>> COMPETITION_ARENA_CONTAINER =
+            CONTAINERS.register("competition_arena", CompetitionArenaContainer::createContainerType);
+
+    public static final RegistryObject<Block> ALLIANCE_HQ =
+            registerBlock("alliance_hq", () -> new AllianceHQBlock(Block.Properties.of(Material.WOOD)
+                    .strength(2.5f, 4.0f).sound(SoundType.WOOD)));
+    public static final RegistryObject<TileEntityType<AllianceHQTileEntity>> ALLIANCE_HQ_TE =
+            TILE_ENTITIES.register("alliance_hq", () -> TileEntityType.Builder.of(
+                AllianceHQTileEntity::create, ALLIANCE_HQ.get()).build(null));
+    public static final RegistryObject<ContainerType<AllianceHQContainer>> ALLIANCE_HQ_CONTAINER =
+            CONTAINERS.register("alliance_hq", AllianceHQContainer::createContainerType);
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         ITEMS.register(name, () -> new BlockItem(toReturn.get(),
